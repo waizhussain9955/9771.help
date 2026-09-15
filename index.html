@@ -43,8 +43,8 @@
   </noscript>
 
   <!-- Preload & Clean Stylesheet -->
-  <link rel="preload" href="css/style.css" as="style">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css?v=3.0" as="style">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
 
   <!-- JSON-LD Structured Data: WebSite & FAQPage -->
   <script type="application/ld+json">
@@ -204,28 +204,6 @@
 
 
   <main id="top">
-
-    <!-- FIXED LEFT STICKY SKYSCRAPER AD (160x600) -->
-    <aside class="fixed-left-skyscraper" id="fixed-left-ad" aria-label="Left Skyscraper Advertisement">
-      <div class="ad-card ad-card-160">
-        <div class="ad-card-top-bar">
-          <span class="ad-disclaimer-label">SPONSORED / اشتہار</span>
-          <button type="button" class="ad-close-btn" id="close-left-ad-btn" aria-label="Close advertisement">&times;</button>
-        </div>
-        <div class="ad-frame-160x600">
-          <script>
-            atOptions = {
-              'key' : 'df2c0c8511853d28efa7f5465cee7421',
-              'format' : 'iframe',
-              'height' : 600,
-              'width' : 160,
-              'params' : {}
-            };
-          </script>
-          <script src="https://www.highrevenueformat.com/df2c0c8511853d28efa7f5465cee7421/invoke.js"></script>
-        </div>
-      </div>
-    </aside>
 
     <!-- HERO SECTION (IMAGE-RICH 2-COLUMN LAYOUT) -->
     <section class="hero-section">
@@ -1011,6 +989,28 @@
       </div>
     </section>
 
+    <!-- 160x600 SKYSCRAPER AD (MOBILE: SHOWN ABOVE FOOTER | DESKTOP: FIXED ON LEFT GUTTER) -->
+    <aside class="skyscraper-ad-wrapper fixed-left-skyscraper" id="fixed-left-ad" aria-label="Advertisement">
+      <div class="ad-card ad-card-160">
+        <div class="ad-card-top-bar">
+          <span class="ad-disclaimer-label">SPONSORED / اشتہار</span>
+          <button type="button" class="ad-close-btn" id="close-left-ad-btn" aria-label="Close advertisement">&times;</button>
+        </div>
+        <div class="ad-frame-160x600">
+          <script>
+            atOptions = {
+              'key' : 'df2c0c8511853d28efa7f5465cee7421',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highrevenueformat.com/df2c0c8511853d28efa7f5465cee7421/invoke.js"></script>
+        </div>
+      </div>
+    </aside>
+
   </main>
 
   <!-- FOOTER -->
@@ -1096,6 +1096,6 @@
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
   <!-- Application Logic -->
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=3.0"></script>
 </body>
 </html>

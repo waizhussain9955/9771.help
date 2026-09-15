@@ -2384,23 +2384,33 @@ html[dir="rtl"] .toast-container {
 }
 
 /* ==========================================================================
-   Fixed Left Sticky Skyscraper Ad (160x600 - "Static / Sticky on Left")
+   160x600 Skyscraper Ad
+   - Mobile (< 1200px): Centered directly above footer (protecting hero UX)
+   - Desktop (>= 1200px): Fixed sticky left rail with dynamic footer clearance
    ========================================================================== */
+.skyscraper-ad-wrapper,
 .fixed-left-skyscraper {
-  position: fixed;
-  left: 10px;
-  top: 90px;
-  z-index: 60;
-  width: 174px;
-  transition: opacity 0.2s ease;
+  position: relative;
+  left: auto;
+  top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 15;
 }
 
+.skyscraper-ad-wrapper .ad-card,
 .fixed-left-skyscraper .ad-card {
   padding: 0.35rem;
   background: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
 }
 
 .ad-card-top-bar {
@@ -2437,24 +2447,27 @@ html[dir="rtl"] .toast-container {
   color: #111827;
 }
 
-/* Wide screens (>= 1520px): align gracefully in left gutter */
+/* Desktop: Fixed sticky on left gutter (>= 1200px) */
+@media (min-width: 1200px) {
+  .skyscraper-ad-wrapper,
+  .fixed-left-skyscraper {
+    position: fixed;
+    left: 8px;
+    top: 90px;
+    z-index: 60;
+    width: 174px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transition: opacity 0.2s ease;
+  }
+}
+
+/* Wide screens (>= 1520px): align gracefully in outer left gutter */
 @media (min-width: 1520px) {
+  .skyscraper-ad-wrapper,
   .fixed-left-skyscraper {
     left: max(10px, calc((100vw - 1140px) / 2 - 184px));
-  }
-}
-
-/* Medium desktops (1200px - 1519px) */
-@media (min-width: 1200px) and (max-width: 1519px) {
-  .fixed-left-skyscraper {
-    left: 8px;
-  }
-}
-
-/* Skyscraper is strictly a desktop side rail (>= 1200px). Completely hidden on mobile/tablet to protect user experience and PageSpeed */
-@media (max-width: 1199px) {
-  .fixed-left-skyscraper {
-    display: none !important;
   }
 }
 
