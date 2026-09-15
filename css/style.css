@@ -2375,4 +2375,90 @@ html[dir="rtl"] .toast-container {
   max-width: 100%;
 }
 
+/* ==========================================================================
+   Fixed Left Sticky Skyscraper Ad (160x600 - "Static / Sticky on Left")
+   ========================================================================== */
+.fixed-left-skyscraper {
+  position: fixed;
+  left: 10px;
+  top: 90px;
+  z-index: 60;
+  width: 174px;
+  transition: opacity 0.2s ease;
+}
+
+.fixed-left-skyscraper .ad-card {
+  padding: 0.35rem;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.ad-card-top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.ad-card-top-bar .ad-disclaimer-label {
+  margin-bottom: 0;
+  font-size: 0.58rem;
+  color: #9CA3AF;
+  line-height: 1;
+}
+
+.ad-close-btn {
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #6B7280;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.ad-close-btn:hover {
+  background: #E5E7EB;
+  color: #111827;
+}
+
+/* Wide screens (>= 1520px): align gracefully in left gutter */
+@media (min-width: 1520px) {
+  .fixed-left-skyscraper {
+    left: max(10px, calc((100vw - 1140px) / 2 - 184px));
+  }
+}
+
+/* Medium desktops (1200px - 1519px) */
+@media (min-width: 1200px) and (max-width: 1519px) {
+  .fixed-left-skyscraper {
+    left: 8px;
+  }
+}
+
+/* Mobile & Tablet (< 1200px): Flow naturally in page without blocking phone reading */
+@media (max-width: 1200px) {
+  .fixed-left-skyscraper {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.5rem auto;
+    z-index: 10;
+  }
+
+  .ad-close-btn {
+    display: none;
+  }
+}
+
+
 

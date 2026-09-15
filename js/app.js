@@ -476,8 +476,23 @@ document.addEventListener("DOMContentLoaded", () => {
   initModalAndToast();
   initMobileMenu();
   initCleanAnchorScroll();
+  initLeftStickyAd();
   updateLastUpdatedDate();
 });
+
+// ==========================================================================
+// Left Sticky Skyscraper Ad Dismiss Handler
+// ==========================================================================
+
+function initLeftStickyAd() {
+  const closeBtn = document.getElementById("close-left-ad-btn");
+  const adAside = document.getElementById("fixed-left-ad");
+  if (closeBtn && adAside) {
+    closeBtn.addEventListener("click", () => {
+      adAside.style.display = "none";
+    });
+  }
+}
 
 // ==========================================================================
 // Clean In-Page Scrolling (Eliminates '#' in Address Bar)
