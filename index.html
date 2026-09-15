@@ -167,8 +167,12 @@
         </div>
       </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
+      <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-icon">☰</span>
+      </button>
+
+      <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
           <li><a href="#eligibility" class="nav-link" data-i18n="navEligibility">Who Can Apply</a></li>
           <li><a href="#sms-tool" class="nav-link" data-i18n="navSmsTool">Prepare SMS</a></li>
           <li><a href="#visual-examples" class="nav-link" data-i18n="navVisualGuide">Visual Examples</a></li>
@@ -179,6 +183,7 @@
           <li><a href="#sms-tool" class="nav-cta-btn" data-i18n="navApplyBtn">Apply via 9771</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 

@@ -474,8 +474,52 @@ document.addEventListener("DOMContentLoaded", () => {
   initCalculator();
   initWhatsAppShare();
   initModalAndToast();
+  initMobileMenu();
   updateLastUpdatedDate();
 });
+
+// ==========================================================================
+// Mobile Navigation Drawer Toggle
+// ==========================================================================
+
+function initMobileMenu() {
+  const toggleBtn = document.getElementById("mobile-nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+  if (!toggleBtn || !navLinks) return;
+
+  const iconSpan = toggleBtn.querySelector(".hamburger-icon");
+
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("mobile-open");
+    toggleBtn.setAttribute("aria-expanded", isOpen);
+    if (iconSpan) {
+      iconSpan.textContent = isOpen ? "✕" : "☰";
+    }
+  });
+
+  // Automatically close menu when any navigation link is clicked
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("mobile-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      if (iconSpan) {
+        iconSpan.textContent = "☰";
+      }
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!toggleBtn.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("mobile-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      if (iconSpan) {
+        iconSpan.textContent = "☰";
+      }
+    }
+  });
+}
+
 
 // ==========================================================================
 // 5. Bilingual Logic (Instant Language Switch)

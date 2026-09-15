@@ -176,6 +176,7 @@ button, input, select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .brand-logo {
@@ -221,6 +222,27 @@ button, input, select {
   letter-spacing: 0.04em;
 }
 
+.mobile-nav-toggle {
+  display: none;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-heading);
+  width: 42px;
+  height: 42px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.mobile-nav-toggle:active {
+  background: #E5E7EB;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -252,6 +274,58 @@ button, input, select {
 .nav-cta-btn:hover {
   background: var(--brand-green-hover);
 }
+
+@media (max-width: 860px) {
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-bottom: 2px solid var(--brand-green);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    display: none;
+    z-index: 60;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+    margin-top: 0.65rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-heading);
+  }
+
+  .nav-cta-btn {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
 
 /* ==========================================================================
    Hero Section (2-Column with Real Photograph)
@@ -1653,8 +1727,8 @@ html[dir="rtl"] .calc-option-btn {
   background: #FFFFFF;
   border-top: 1px solid var(--border-light);
   padding: 0.6rem 1rem;
-  z-index: 90;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 95;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -1663,10 +1737,11 @@ html[dir="rtl"] .calc-option-btn {
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem;
+    padding-bottom: max(0.6rem, env(safe-area-inset-bottom));
   }
 
   body {
-    padding-bottom: 65px;
+    padding-bottom: calc(75px + env(safe-area-inset-bottom));
   }
 }
 
@@ -1675,7 +1750,8 @@ html[dir="rtl"] .calc-option-btn {
   background: var(--brand-green);
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  min-height: 44px;
   padding: 0.65rem 0.9rem;
   border-radius: var(--radius-full);
   text-align: center;
@@ -1689,8 +1765,9 @@ html[dir="rtl"] .calc-option-btn {
   background: var(--brand-amber);
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.875rem;
-  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  min-height: 44px;
+  padding: 0.65rem 1.15rem;
   border-radius: var(--radius-full);
   border: none;
   display: inline-flex;
@@ -1706,12 +1783,12 @@ html[dir="rtl"] .calc-option-btn {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 120;
   padding: 1rem;
 }
 
@@ -1722,7 +1799,7 @@ html[dir="rtl"] .calc-option-btn {
 .modal-card {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 1.5rem;
   max-width: 460px;
   width: 100%;
   box-shadow: var(--shadow-hover);
@@ -1731,25 +1808,26 @@ html[dir="rtl"] .calc-option-btn {
 
 .modal-close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.85rem;
+  right: 0.85rem;
   background: transparent;
   border: none;
   color: var(--text-muted);
   font-size: 1.4rem;
   cursor: pointer;
+  padding: 0.25rem 0.5rem;
 }
 
 html[dir="rtl"] .modal-close-btn {
   right: auto;
-  left: 1rem;
+  left: 0.85rem;
 }
 
 .toast-container {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  z-index: 110;
+  z-index: 130;
 }
 
 html[dir="rtl"] .toast-container {
@@ -1769,3 +1847,192 @@ html[dir="rtl"] .toast-container {
   gap: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Optimizations
+   ========================================================================== */
+
+/* Prevent iOS input auto-zoom */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-wrapper {
+    padding: 2.25rem 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0 1.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  /* 2-Column Stats on Mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.825rem;
+  }
+
+  /* Full-width tool buttons */
+  .tool-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .btn-send-sms,
+  .btn-copy-sms,
+  .btn-reset-form {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .btn-reset-form {
+    text-align: center;
+    min-height: 36px;
+  }
+
+  /* Word wrap prevention */
+  .sms-display-content {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* Visual guides on mobile */
+  .visual-example-card {
+    padding: 1.15rem;
+  }
+
+  .excise-field-row {
+    font-size: 0.8rem;
+  }
+
+  .sms-chat-bubble {
+    max-width: 92%;
+    font-size: 0.825rem;
+  }
+
+  /* Calculator on mobile */
+  .calculator-card {
+    padding: 1.25rem;
+  }
+
+  .calc-res-value {
+    font-size: 1.45rem;
+  }
+
+  /* Pump card */
+  .pump-card {
+    padding: 1.15rem;
+    gap: 1rem;
+  }
+
+  .tok-bubble-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  /* Official source card */
+  .official-source-card {
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .btn-official-link {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+
+  /* Video wrapper */
+  .video-container-card {
+    padding: 1.15rem;
+  }
+
+  .video-fallback-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .video-fallback-box .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer on mobile */
+  .main-footer {
+    padding: 2.5rem 0 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .disclaimer-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .lang-switch-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
