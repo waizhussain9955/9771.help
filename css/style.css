@@ -583,6 +583,8 @@ html[dir="rtl"] .hero-clarity-box {
 .hero-media-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1200 / 669;
+  object-fit: cover;
   display: block;
 }
 
@@ -812,6 +814,8 @@ html[dir="rtl"] .hero-clarity-box {
 .eligibility-photo-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1200 / 669;
+  object-fit: cover;
   display: block;
 }
 
@@ -1276,6 +1280,8 @@ html[dir="rtl"] .bubble-incoming {
 .infographic-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1200 / 675;
+  object-fit: cover;
   max-width: 960px;
   display: block;
   margin: 0 auto;
@@ -2445,20 +2451,10 @@ html[dir="rtl"] .toast-container {
   }
 }
 
-/* Mobile & Tablet (< 1200px): Flow naturally in page without blocking phone reading */
-@media (max-width: 1200px) {
+/* Skyscraper is strictly a desktop side rail (>= 1200px). Completely hidden on mobile/tablet to protect user experience and PageSpeed */
+@media (max-width: 1199px) {
   .fixed-left-skyscraper {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
-    max-width: 200px;
-    margin: 1.5rem auto;
-    z-index: 10;
-  }
-
-  .ad-close-btn {
-    display: none;
+    display: none !important;
   }
 }
 

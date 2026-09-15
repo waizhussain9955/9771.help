@@ -30,12 +30,20 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23006837'/><text x='50%' y='63%' font-size='38' font-weight='700' font-family='sans-serif' fill='%23FFFFFF' text-anchor='middle'>9771</text></svg>">
 
-  <!-- Human Typography: Plus Jakarta Sans & Noto Nastaliq Urdu -->
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/hero_fuel_station.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Preconnect & Asynchronous Non-Blocking Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap">
+  </noscript>
 
-  <!-- Minimalist, Clean Stylesheet -->
+  <!-- Preload & Clean Stylesheet -->
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- JSON-LD Structured Data: WebSite & FAQPage -->
@@ -257,12 +265,19 @@
 
           <!-- Right Column: Real Petrol Station Photo -->
           <div class="hero-media-wrap">
-            <img 
-              src="assets/hero_fuel_station.jpg" 
-              alt="Pakistani petrol station refueling motorcycle and car under Petrol Relief Scheme" 
-              class="hero-media-img"
-              loading="eager"
-            >
+            <picture>
+              <source srcset="assets/hero_fuel_station.webp" type="image/webp">
+              <img 
+                src="assets/hero_fuel_station.jpg" 
+                alt="Pakistani petrol station refueling motorcycle and car under Petrol Relief Scheme" 
+                class="hero-media-img"
+                width="1200"
+                height="669"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+              >
+            </picture>
             <div class="hero-media-badge">
               <div>
                 <div class="hero-badge-title">Rs. 100/Litre Petrol Subsidy</div>
@@ -390,12 +405,18 @@
 
         <!-- Real Photograph Showcase of Eligible Transport -->
         <div class="eligibility-photo-showcase">
-          <img 
-            src="assets/eligible_vehicles.jpg" 
-            alt="Eligible vehicles under 9771 Petrol Relief: Motorcycle, Rickshaw, and 800cc small car in Pakistan" 
-            class="eligibility-photo-img"
-            loading="lazy"
-          >
+          <picture>
+            <source srcset="assets/eligible_vehicles.webp" type="image/webp">
+            <img 
+              src="assets/eligible_vehicles.jpg" 
+              alt="Eligible vehicles under 9771 Petrol Relief: Motorcycle, Rickshaw, and 800cc small car in Pakistan" 
+              class="eligibility-photo-img"
+              width="1200"
+              height="669"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
         </div>
 
         <div class="eligibility-grid">
@@ -708,20 +729,26 @@
           </div>
 
           <div class="infographic-preview-wrap">
-            <a href="assets/pm-fuel-relief-guide.jpeg" target="_blank" rel="noopener noreferrer" title="Click to view full size">
-              <img 
-                src="assets/pm-fuel-relief-guide.jpeg" 
-                alt="وزیراعظم شہباز شریف فیول ریلیف اسکیم 2026 میں رجسٹریشن کا طریقہ - Step By Step Guide" 
-                class="infographic-img"
-                loading="lazy"
-              >
+            <a href="assets/pm-fuel-relief-guide.webp" target="_blank" rel="noopener noreferrer" title="Click to view full size">
+              <picture>
+                <source srcset="assets/pm-fuel-relief-guide.webp" type="image/webp">
+                <img 
+                  src="assets/pm-fuel-relief-guide.jpg" 
+                  alt="وزیراعظم شہباز شریف فیول ریلیف اسکیم 2026 میں رجسٹریشن کا طریقہ - Step By Step Guide" 
+                  class="infographic-img"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
             </a>
           </div>
 
           <div class="infographic-caption">
             <span>🔍</span>
             <span data-i18n="infoCaption">Official visual infographic guide for 9771 Petrol Relief Scheme 2026.</span>
-            <a href="assets/pm-fuel-relief-guide.jpeg" target="_blank" rel="noopener noreferrer" class="infographic-zoom-btn">
+            <a href="assets/pm-fuel-relief-guide.webp" target="_blank" rel="noopener noreferrer" class="infographic-zoom-btn">
               <span>View Full Size / فل سائز دیکھیں</span> ↗
             </a>
           </div>
