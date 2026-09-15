@@ -139,21 +139,18 @@
 </head>
 <body>
 
-  <!-- Top Disclaimer & Language Switch Bar -->
-  <aside class="top-disclaimer-bar" aria-label="Legal notice and language selection">
+  <!-- Top Compact Disclaimer Bar -->
+  <aside class="top-disclaimer-bar" aria-label="Legal notice">
     <div class="container disclaimer-inner">
       <div class="disclaimer-text">
         <span class="disclaimer-badge" data-i18n="topNoticeBadge">Independent Guide</span>
         <span data-i18n="topNoticeText">9771.help is an independent informational website and is not affiliated with, operated by, or endorsed by the Government of Pakistan.</span>
       </div>
-      <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Toggle language">
-        🌐 <span data-i18n="langSwitchBtn">اردو میں دیکھیں</span>
-      </button>
     </div>
   </aside>
 
   <!-- Main Header & Navigation -->
-  <header class="main-header">
+  <header class="main-header" id="main-header">
     <div class="container header-inner">
       <a href="#top" class="brand-logo" aria-label="9771 Help Homepage">
         <div class="brand-emblem">
@@ -167,25 +164,36 @@
         </div>
       </a>
 
-      <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger-icon">☰</span>
-      </button>
-
+      <!-- Navigation Drawer (Desktop Center, Mobile Dropdown) -->
       <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#eligibility" class="nav-link" data-i18n="navEligibility">Who Can Apply</a></li>
-          <li><a href="#sms-tool" class="nav-link" data-i18n="navSmsTool">Prepare SMS</a></li>
-          <li><a href="#visual-examples" class="nav-link" data-i18n="navVisualGuide">Visual Examples</a></li>
-          <li><a href="#video-guide" class="nav-link" data-i18n="navVideo">Video Guide</a></li>
-          <li><a href="#roadmap" class="nav-link" data-i18n="navTokenGuide">Token Guide</a></li>
-          <li><a href="#calculator" class="nav-link" data-i18n="navCalculator">Calculator</a></li>
-          <li><a href="#faqs" class="nav-link" data-i18n="navFaq">FAQs</a></li>
-          <li><a href="#sms-tool" class="nav-cta-btn" data-i18n="navApplyBtn">Apply via 9771</a></li>
+          <li><a href="#eligibility" class="nav-link"><span class="nav-icon">🏍️</span> <span data-i18n="navEligibility">Who Can Apply</span></a></li>
+          <li><a href="#sms-tool" class="nav-link"><span class="nav-icon">📱</span> <span data-i18n="navSmsTool">Prepare SMS</span></a></li>
+          <li><a href="#visual-examples" class="nav-link"><span class="nav-icon">💳</span> <span data-i18n="navVisualGuide">Visual Examples</span></a></li>
+          <li><a href="#video-guide" class="nav-link"><span class="nav-icon">🎥</span> <span data-i18n="navVideo">Video Guide</span></a></li>
+          <li><a href="#roadmap" class="nav-link"><span class="nav-icon">ℹ️</span> <span data-i18n="navTokenGuide">Token Guide</span></a></li>
+          <li><a href="#calculator" class="nav-link"><span class="nav-icon">🧮</span> <span data-i18n="navCalculator">Calculator</span></a></li>
+          <li><a href="#faqs" class="nav-link"><span class="nav-icon">❓</span> <span data-i18n="navFaq">FAQs</span></a></li>
+          <li class="nav-cta-item"><a href="#sms-tool" class="nav-cta-btn" data-i18n="navApplyBtn">Apply via 9771</a></li>
         </ul>
       </nav>
 
+      <!-- Header Actions (Language Switch + Animated Mobile Toggle) -->
+      <div class="header-right-actions">
+        <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Toggle language">
+          🌐 <span data-i18n="langSwitchBtn">اردو میں دیکھیں</span>
+        </button>
+
+        <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
     </div>
   </header>
+
 
   <main id="top">
 
@@ -266,6 +274,27 @@
 
       </div>
     </section>
+
+    <!-- SPONSORED: 728x90 Leaderboard Ad -->
+    <aside class="ad-banner-section" aria-label="Advertisement">
+      <div class="container">
+        <div class="ad-card ad-card-728">
+          <span class="ad-disclaimer-label">SPONSORED / اشتہار</span>
+          <div class="ad-frame-728x90">
+            <script>
+              atOptions = {
+                'key' : 'd21f3ea090224af47febb9cf7c0cb4ef',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/d21f3ea090224af47febb9cf7c0cb4ef/invoke.js"></script>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <!-- SECTION 2: SCHEME AT A GLANCE (STAT CARDS) -->
     <section class="section-wrapper section-alt" id="overview">
@@ -508,6 +537,27 @@
 
       </div>
     </section>
+
+    <!-- SPONSORED: 468x60 Banner Ad -->
+    <aside class="ad-banner-section" aria-label="Advertisement">
+      <div class="container">
+        <div class="ad-card ad-card-468">
+          <span class="ad-disclaimer-label">SPONSORED / اشتہار</span>
+          <div class="ad-frame-468x60">
+            <script>
+              atOptions = {
+                'key' : '584e5461575d52013ed60246badeb363',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/584e5461575d52013ed60246badeb363/invoke.js"></script>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <!-- SECTION: VISUAL EXAMPLES & CARD GUIDE -->
     <section class="section-wrapper" id="visual-examples">
@@ -753,6 +803,27 @@
         </div>
       </div>
     </section>
+
+    <!-- SPONSORED: 160x600 Skyscraper Ad -->
+    <aside class="ad-banner-section" aria-label="Advertisement">
+      <div class="container">
+        <div class="ad-card ad-card-160">
+          <span class="ad-disclaimer-label">SPONSORED / اشتہار</span>
+          <div class="ad-frame-160x600">
+            <script>
+              atOptions = {
+                'key' : 'df2c0c8511853d28efa7f5465cee7421',
+                'format' : 'iframe',
+                'height' : 600,
+                'width' : 160,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/df2c0c8511853d28efa7f5465cee7421/invoke.js"></script>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <!-- SECTION 7: ANTI-SCAM WARNING BANNER -->
     <section class="section-wrapper section-alt" id="safety">

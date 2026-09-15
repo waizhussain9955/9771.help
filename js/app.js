@@ -251,7 +251,7 @@ const TRANSLATIONS = {
     // Top disclaimer
     topNoticeBadge: "آزاد معلوماتی گائیڈ",
     topNoticeText: "9771.help ایک آزاد معلوماتی ویب سائٹ ہے۔ اس کا حکومتِ پاکستان سے کوئی براہِ راست یا سرکاری تعلق نہیں ہے۔",
-    langSwitchBtn: "View in English",
+    langSwitchBtn: "English",
 
     // Header & Nav
     brandName: "9771.help",
@@ -444,7 +444,7 @@ const TRANSLATIONS = {
 
     // Sticky mobile bar
     stickyApply: "ایس ایم ایس بنائیں",
-    stickyTok: "TOK بھیجیں",
+    stickyTok: "TOK حاصل کریں",
 
     // Modal & Toast
     modalTitle: "ایس ایم ایس بھیجنے کا طریقہ",
@@ -475,8 +475,64 @@ document.addEventListener("DOMContentLoaded", () => {
   initWhatsAppShare();
   initModalAndToast();
   initMobileMenu();
+  initCleanAnchorScroll();
   updateLastUpdatedDate();
 });
+
+// ==========================================================================
+// Clean In-Page Scrolling (Eliminates '#' in Address Bar)
+// ==========================================================================
+
+function initCleanAnchorScroll() {
+  // If the page loaded with a hash in URL (e.g. /#roadmap or /#faqs), remove it immediately
+  if (window.location.hash) {
+    const initialTargetId = window.location.hash.replace("#", "");
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    setTimeout(() => {
+      scrollToTargetId(initialTargetId);
+    }, 150);
+  }
+
+  // Intercept all anchor clicks with hash href
+  document.addEventListener("click", (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute("href");
+    if (!href || href === "#") return;
+
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    scrollToTargetId(targetId);
+
+    // Keep URL clean without appending '#...'
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  });
+}
+
+function scrollToTargetId(id) {
+  if (!id) return;
+  if (id === "top") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const header = document.getElementById("main-header");
+  const offset = (header ? header.offsetHeight : 65) + 10;
+  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+  window.scrollTo({
+    top: Math.max(0, targetPosition - offset),
+    behavior: "smooth"
+  });
+}
 
 // ==========================================================================
 // Mobile Navigation Drawer Toggle
@@ -485,37 +541,50 @@ document.addEventListener("DOMContentLoaded", () => {
 function initMobileMenu() {
   const toggleBtn = document.getElementById("mobile-nav-toggle");
   const navLinks = document.getElementById("nav-links");
+  const backdrop = document.getElementById("nav-backdrop");
   if (!toggleBtn || !navLinks) return;
 
-  const iconSpan = toggleBtn.querySelector(".hamburger-icon");
+  function closeMenu() {
+    navLinks.classList.remove("mobile-open");
+    toggleBtn.classList.remove("active");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    if (backdrop) backdrop.classList.remove("active");
+  }
 
-  toggleBtn.addEventListener("click", () => {
+  function toggleMenu() {
     const isOpen = navLinks.classList.toggle("mobile-open");
+    toggleBtn.classList.toggle("active", isOpen);
     toggleBtn.setAttribute("aria-expanded", isOpen);
-    if (iconSpan) {
-      iconSpan.textContent = isOpen ? "✕" : "☰";
+    if (backdrop) {
+      backdrop.classList.toggle("active", isOpen);
     }
+  }
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMenu();
   });
+
+  if (backdrop) {
+    backdrop.addEventListener("click", closeMenu);
+  }
 
   // Automatically close menu when any navigation link is clicked
   navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("mobile-open");
-      toggleBtn.setAttribute("aria-expanded", "false");
-      if (iconSpan) {
-        iconSpan.textContent = "☰";
-      }
-    });
+    link.addEventListener("click", closeMenu);
   });
 
   // Close when clicking outside
   document.addEventListener("click", (e) => {
     if (!toggleBtn.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove("mobile-open");
-      toggleBtn.setAttribute("aria-expanded", "false");
-      if (iconSpan) {
-        iconSpan.textContent = "☰";
-      }
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
     }
   });
 }
