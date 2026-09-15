@@ -481,17 +481,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================================================================
-// Left Sticky Skyscraper Ad Dismiss Handler
+// Left Sticky Skyscraper Ad (Pushes Up Cleanly Before Footer)
 // ==========================================================================
 
 function initLeftStickyAd() {
   const closeBtn = document.getElementById("close-left-ad-btn");
   const adAside = document.getElementById("fixed-left-ad");
-  if (closeBtn && adAside) {
+  const footer = document.querySelector(".main-footer");
+  if (!adAside) return;
+
+  if (closeBtn) {
     closeBtn.addEventListener("click", () => {
       adAside.style.display = "none";
     });
   }
+
+  function adjustAdPosition() {
+    // On mobile & tablet (< 1200px), ad is static in-flow
+    if (window.innerWidth < 1200) {
+      adAside.style.top = "";
+      return;
+    }
+
+    if (!footer) return;
+
+    const defaultTop = 90; // Top offset below sticky header
+    const footerRect = footer.getBoundingClientRect();
+    const adHeight = adAside.offsetHeight || 635;
+    const gap = 24; // 24px clean buffer above footer
+
+    // As soon as footer enters within ad's reach, push the ad up
+    if (footerRect.top < (defaultTop + adHeight + gap)) {
+      const newTop = footerRect.top - adHeight - gap;
+      adAside.style.top = `${newTop}px`;
+    } else {
+      adAside.style.top = `${defaultTop}px`;
+    }
+  }
+
+  window.addEventListener("scroll", adjustAdPosition, { passive: true });
+  window.addEventListener("resize", adjustAdPosition, { passive: true });
+  adjustAdPosition();
 }
 
 // ==========================================================================

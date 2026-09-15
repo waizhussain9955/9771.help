@@ -1743,6 +1743,8 @@ html[dir="rtl"] .calc-option-btn {
    Footer
    ========================================================================== */
 .main-footer {
+  position: relative;
+  z-index: 65;
   background: #111827;
   color: #D1D5DB;
   padding: 3.5rem 0 2rem;
