@@ -19,8 +19,8 @@
 
 // Update this date whenever official guidelines are updated
 const LAST_UPDATED = {
-  en: "September 16, 2026",
-  ur: "16 ستمبر 2026"
+  en: "September 17, 2026",
+  ur: "17 ستمبر 2026"
 };
 
 // Configurable Province Codes (First Letter Logic)
@@ -201,6 +201,9 @@ const TRANSLATIONS = {
     btnOfficial: "Visit pmfuelrelief.pk →",
 
     // Section 9: FAQs
+    faqTag: "Help & Answers",
+    faqTitle: "Frequently Asked Questions",
+    faqDesc: "Clear answers to the most common questions regarding 9771 registration and fuel tokens.",
     faq1Q: "What is the 9771 fuel relief scheme?",
     faq1A: "The 9771 scheme is a targeted fuel relief program announced by the Government of Pakistan to provide a subsidy of Rs. 100 per litre on petrol for eligible vehicle owners (motorcycles, rickshaws, and cars with engine capacity up to 800cc).",
     faq2Q: "How do I register for the scheme?",
@@ -454,6 +457,9 @@ const TRANSLATIONS = {
     btnOfficial: "سرکاری پورٹل (pmfuelrelief.pk) دیکھیں ←",
 
     // Section 9: FAQs
+    faqTag: "مدد اور جوابات",
+    faqTitle: "اکثر پوچھے جانے والے سوالات",
+    faqDesc: "9771 رجسٹریشن اور فیول ٹوکن کے متعلق عام سوالات کے واضح جوابات۔",
     faq1Q: "9771 فیول ریلیف اسکیم کیا ہے؟",
     faq1A: "یہ حکومتِ پاکستان کی طرف سے کم آمدن اور مخصوص گاڑیوں (موٹر سائیکل، رکشہ اور 800cc تک کی کاروں) کے مالکان کے لیے پیٹرول پر 100 روپے فی لیٹر رعایت دینے کا پروگرام ہے۔",
     faq2Q: "اس اسکیم کے لیے رجسٹریشن کیسے کی جاتی ہے؟",
