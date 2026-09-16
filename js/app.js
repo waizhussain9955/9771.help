@@ -287,6 +287,14 @@ const TRANSLATIONS = {
     faq11A: "Hukoomat-e-Pakistan ke mutabiq motorcycles, scooters, auto-rickshaws aur Qingqi 3-wheelers ko 20 litre mahana quota (Rs. 2,000 subsidy) milta hai. Jabke 800cc tak ki registered choti cars (Mehran, Alto wagera) ko 30 litre mahana quota (Rs. 3,000 subsidy) diya jata hai.",
     faq12Q: "Petrol price in Pakistan today par 9771 fuel relief ka kya faida hai?",
     faq12A: "OGRA ki janib se aam market me petrol ki qeemat Rs. 279.75 per litre hai. Lekin 9771 token holders ko seedha Rs. 100 per litre ki choot milti hai, jis se subsidized petrol rate sirf Rs. 179.75 per litre parhta hai.",
+    faq13Q: "How to get petrol relief? (Pakistan me petrol relief kaise hasil karein?)",
+    faq13A: "To get petrol relief, send an SMS to 9771 in the format: REG [13-digit CNIC] [Vehicle No] [Province Code] [Registration Date DDMMYYYY]. After receiving approval, text TOK to 9771 right before visiting the fuel station to obtain your Rs. 100/Litre relief voucher token.",
+    faq14Q: "Can I check my eligibility for the 2000 petrol subsidy in Punjab using my CNIC?",
+    faq14A: "Yes. Punjab vehicle owners can verify eligibility by sending their 13-digit CNIC with vehicle plate details and province code 'P' to 9771. For motorcycles and rickshaws, the 20-litre monthly quota at Rs. 100/L discount totals an exact Rs. 2,000 monthly petrol subsidy.",
+    faq15Q: "Who is eligible for fuel subsidy?",
+    faq15A: "Eligible citizens include registered owners of motorcycles, scooters, auto-rickshaws, Qingqi 3-wheelers, and small cars up to 800cc (e.g., Suzuki Mehran, Alto) verified against provincial excise records and government socio-economic criteria.",
+    faq16Q: "What is the current petroleum levy in Pakistan for 2026?",
+    faq16A: "In 2026, the Petroleum Development Levy (PDL) set by the Government under OGRA pricing guidelines is capped around Rs. 60 to Rs. 70 per litre on petrol and high-speed diesel. The 9771 scheme cushions this inflation by offering a direct Rs. 100/L subsidy token.",
 
     // Modal & Toast
     modalTitle: "How to Send Your SMS",
@@ -543,6 +551,14 @@ const TRANSLATIONS = {
     faq11A: "موٹر سائیکل اور رکشہ کے لیے ماہانہ 20 لیٹر (2,000 روپے رعایت) اور 800cc کار کے لیے 30 لیٹر (3,000 روپے رعایت) ہے۔",
     faq12Q: "پاکستان میں آج پیٹرول کی قیمت پر 9771 اسکیم کا کیا فائدہ ہے؟",
     faq12A: "مارکیٹ میں پیٹرول اگر 279.75 روپے کا ہے، تو 9771 ٹوکن کے ساتھ آپ کو صرف 179.75 روپے فی لیٹر پڑے گا (100 روپے بچت)۔",
+    faq13Q: "پاکستان میں پیٹرول ریلیف کیسے حاصل کریں؟ (How to get petrol relief)",
+    faq13A: "پیٹرول ریلیف حاصل کرنے کے لیے 9771 پر ایس ایم ایس بھیج کر رجسٹریشن کریں۔ فارمیٹ یہ ہے: REG [شناختی کارڈ] [گاڑی نمبر] [صوبہ کوڈ] [رجسٹریشن تاریخ]۔ تصدیق کے بعد پٹرول پمپ جانے سے پہلے 9771 پر TOK بھیج کر 100 روپے فی لیٹر رعایت کا ٹوکن حاصل کریں۔",
+    faq14Q: "کیا میں پنجاب میں شناختی کارڈ کے ذریعے 2000 روپے پیٹرول سبسڈی کی اہلیت معلوم کر سکتا ہوں؟",
+    faq14A: "جی ہاں! پنجاب کے رہائشی اپنے 13 ہندسوں کے شناختی کارڈ کے ساتھ صوبائی کوڈ 'P' لگا کر 9771 پر رجسٹریشن ایس ایم ایس بھیج سکتے ہیں۔ موٹر سائیکل کے لیے ماہانہ 20 لیٹر کوٹہ 100 روپے رعایت کے ساتھ پورے 2,000 روپے کی ماہانہ فیول سبسڈی بنتا ہے۔",
+    faq15Q: "فیول سبسڈی کے لیے کون اہل ہے؟ (Who is eligible for fuel subsidy)",
+    faq15A: "اہل افراد میں تمام رجسٹرڈ موٹر سائیکلز، اسکوٹرز، رکشہ، چنگ چی، اور 800cc تک کی چھوٹی کاریں (مہران، آلٹو وغیرہ) شامل ہیں جن کا ایکسائز ریکارڈ اور شناختی کارڈ درست ہو۔",
+    faq16Q: "پاکستان میں 2026 کے لیے موجودہ پیٹرولیم لیوی (Petroleum Levy) کیا ہے؟",
+    faq16A: "پاکستان میں فنانس ایکٹ اور اوگرا (OGRA) کے مطابق پیٹرولیم لیوی (PDL) تقریباً 60 سے 70 روپے فی لیٹر تک ہے۔ 9771 فیول اسکیم شہریوں کو اس مہنگائی سے بچانے کے لیے براہِ راست 100 روپے فی لیٹر کی سبسڈی فراہم کرتی ہے۔",
 
     // Modal & Toast
     modalTitle: "ایس ایم ایس بھیجنے کا طریقہ",
