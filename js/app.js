@@ -174,6 +174,7 @@ const TRANSLATIONS = {
     videoDesc: "Learn how to format your registration message, check your quota, and claim your Rs. 100/litre petrol discount at the pump.",
     videoFallbackText: "Having trouble playing the video? You can watch it directly on YouTube.",
     btnWatchYoutube: "Watch on YouTube ↗",
+    videoPlayBtnText: "Play Video Guide",
 
 
 
@@ -445,6 +446,7 @@ const TRANSLATIONS = {
     videoDesc: "ویڈیو کے ذریعے سمجھیں کہ کس طرح بغیر کسی غلطی کے 9771 پر رجسٹریشن کر کے پیٹرول پر 100 روپے فی لیٹر رعایت حاصل کی جائے۔",
     videoFallbackText: "اگر ویڈیو یہاں نہ چلے تو آپ اسے براہِ راست یوٹیوب پر بھی دیکھ سکتے ہیں۔",
     btnWatchYoutube: "یوٹیوب پر دیکھیں ↗",
+    videoPlayBtnText: "ویڈیو دیکھیں",
 
 
 
@@ -604,6 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initCleanAnchorScroll();
   initLeftStickyAd();
+  initVideoFacade();
   updateLastUpdatedDate();
 });
 
@@ -1153,3 +1156,42 @@ function showToast(msg) {
     }, 300);
   }, 2500);
 }
+
+// ==========================================================================
+// On-Demand Video Facade Loader (Eliminates static iframe from initial HTML)
+// ==========================================================================
+
+function initVideoFacade() {
+  const container = document.getElementById("video-facade-container");
+  if (!container) return;
+
+  function loadAndPlayVideo() {
+    if (container.querySelector("iframe")) return; // already loaded
+
+    const videoId = container.getAttribute("data-video-id") || "RA7aveDXIyc";
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("src", `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`);
+    iframe.setAttribute("title", "9771 Fuel Relief Scheme Step-by-Step Video Guide");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "true");
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.position = "absolute";
+    iframe.style.top = "0";
+    iframe.style.left = "0";
+
+    container.innerHTML = "";
+    container.classList.remove("video-facade");
+    container.appendChild(iframe);
+  }
+
+  container.addEventListener("click", loadAndPlayVideo);
+  container.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      loadAndPlayVideo();
+    }
+  });
+}
+

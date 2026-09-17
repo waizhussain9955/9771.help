@@ -820,14 +820,22 @@
             <p class="section-desc" data-i18n="videoDesc">Learn how to format your registration message, check your quota, and claim your Rs. 100/litre petrol discount at the pump.</p>
           </div>
 
-          <div class="video-embed-wrapper">
-            <iframe 
-              src="https://www.youtube-nocookie.com/embed/RA7aveDXIyc" 
-              title="9771 Fuel Relief Scheme Step-by-Step Video Guide"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen
+          <div class="video-embed-wrapper video-facade" id="video-facade-container" data-video-id="RA7aveDXIyc" role="button" tabindex="0" aria-label="Click to play 9771 video guide">
+            <img 
+              src="https://i.ytimg.com/vi/RA7aveDXIyc/hqdefault.jpg" 
+              alt="9771 Fuel Relief Scheme Step-by-Step Video Guide" 
+              class="video-facade-thumb"
               loading="lazy"
-            ></iframe>
+              width="840"
+              height="472"
+            >
+            <div class="video-facade-overlay">
+              <div class="video-play-btn" id="video-play-trigger">
+                <span class="video-play-pulse"></span>
+                <span class="video-play-icon"><i class="fa-solid fa-play"></i></span>
+              </div>
+              <span class="video-play-label" data-i18n="videoPlayBtnText">Play Video Guide</span>
+            </div>
           </div>
 
           <div class="video-fallback-box">
