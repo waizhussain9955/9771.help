@@ -2466,7 +2466,226 @@ html[dir="rtl"] .toast-container {
 /* Wide screens (>= 1520px): align gracefully in outer left gutter */
 @media (min-width: 1520px) {
   .skyscraper-ad-wrapper,
-  .fixed-left-skyscraper {
-    left: max(10px, calc((100vw - 1140px) / 2 - 184px));
-  }
 }
+
+/* ==========================================================================
+   Professional Icon Library Styles (Font Awesome)
+   ========================================================================== */
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: #006837;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover .nav-icon {
+  color: #047857;
+  transform: translateY(-1px);
+}
+
+[dir="rtl"] .nav-icon {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+.hero-actions .btn-primary i,
+.hero-actions .btn-secondary i {
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Official Exact Petrol & Fuel Price Section (#fuel-prices)
+   ========================================================================== */
+.fuel-price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fuel-price-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fuel-price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.fuel-card-featured {
+  border: 2px solid #006837;
+  background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 30%);
+}
+
+.fuel-card-badge {
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  background: #006837;
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fuel-type-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.fuel-icon {
+  font-size: 1.35rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F3F4F6;
+  color: #374151;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.fuel-card-featured .fuel-icon {
+  background: #DCFCE7;
+  color: #006837;
+}
+
+.fuel-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px 0;
+}
+
+.fuel-sub-label {
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+.fuel-pricing-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: #F9FAFB;
+  border-radius: 10px;
+  border: 1px solid #F3F4F6;
+}
+
+.fuel-card-featured .fuel-pricing-block {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: #4B5563;
+}
+
+.price-row.discount-row {
+  color: #D97706;
+  font-weight: 600;
+  border-bottom: 1px dashed #E5E7EB;
+  padding-bottom: 0.5rem;
+}
+
+.price-row.net-row {
+  padding-top: 0.25rem;
+}
+
+.price-val-regular {
+  font-weight: 600;
+  color: #4B5563;
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+.price-val-discount {
+  color: #059669;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.price-val-subsidized {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #006837;
+}
+
+.price-val-standard {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.fuel-status-badge {
+  background: #E5E7EB;
+  color: #374151;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.fuel-quota-savings {
+  margin-top: auto;
+  font-size: 0.825rem;
+  color: #065F46;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.fuel-card-note {
+  margin-top: auto;
+  font-size: 0.825rem;
+  color: #6B7280;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.fuel-uniform-notice {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.86rem;
+  color: #166534;
+  line-height: 1.5;
+}
+
+.fuel-uniform-notice i {
+  font-size: 1.15rem;
+  color: #006837;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+

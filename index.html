@@ -45,6 +45,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap">
   </noscript>
 
+  <!-- Font Awesome 6 Professional Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
   <!-- Preload & Clean Stylesheet -->
   <link rel="preload" href="css/style.css?v=3.1" as="style">
   <link rel="stylesheet" href="css/style.css?v=3.1">
@@ -75,6 +78,12 @@
           {
             "@type": "ListItem",
             "position": 2,
+            "name": "Official Petrol Price in Pakistan Today",
+            "item": "https://9771.help/#fuel-prices"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
             "name": "9771 Registration Tool",
             "item": "https://9771.help/#sms-tool"
           }
@@ -234,21 +243,22 @@
       <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#eligibility" class="nav-link"><span class="nav-icon">🏍️</span> <span data-i18n="navEligibility">Who Can Apply</span></a></li>
-          <li><a href="#sms-tool" class="nav-link"><span class="nav-icon">📱</span> <span data-i18n="navSmsTool">Prepare SMS</span></a></li>
-          <li><a href="#visual-examples" class="nav-link"><span class="nav-icon">💳</span> <span data-i18n="navVisualGuide">Visual Examples</span></a></li>
-          <li><a href="#video-guide" class="nav-link"><span class="nav-icon">🎥</span> <span data-i18n="navVideo">Video Guide</span></a></li>
-          <li><a href="#roadmap" class="nav-link"><span class="nav-icon">ℹ️</span> <span data-i18n="navTokenGuide">Token Guide</span></a></li>
-          <li><a href="#calculator" class="nav-link"><span class="nav-icon">🧮</span> <span data-i18n="navCalculator">Calculator</span></a></li>
-          <li><a href="#faqs" class="nav-link"><span class="nav-icon">❓</span> <span data-i18n="navFaq">FAQs</span></a></li>
-          <li class="nav-cta-item"><a href="#sms-tool" class="nav-cta-btn" data-i18n="navApplyBtn">Apply via 9771</a></li>
+          <li><a href="#fuel-prices" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-gas-pump"></i></span> <span data-i18n="navFuelPrices">Fuel Prices</span></a></li>
+          <li><a href="#eligibility" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-motorcycle"></i></span> <span data-i18n="navEligibility">Who Can Apply</span></a></li>
+          <li><a href="#sms-tool" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span data-i18n="navSmsTool">Prepare SMS</span></a></li>
+          <li><a href="#visual-examples" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-id-card"></i></span> <span data-i18n="navVisualGuide">Visual Examples</span></a></li>
+          <li><a href="#video-guide" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-play"></i></span> <span data-i18n="navVideo">Video Guide</span></a></li>
+          <li><a href="#roadmap" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-ticket"></i></span> <span data-i18n="navTokenGuide">Token Guide</span></a></li>
+          <li><a href="#calculator" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-calculator"></i></span> <span data-i18n="navCalculator">Calculator</span></a></li>
+          <li><a href="#faqs" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> <span data-i18n="navFaq">FAQs</span></a></li>
+          <li class="nav-cta-item"><a href="#sms-tool" class="nav-cta-btn"><span data-i18n="navApplyBtn">Apply via 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 6px;"></i></a></li>
         </ul>
       </nav>
 
       <!-- Header Actions (Language Switch + Animated Mobile Toggle) -->
       <div class="header-right-actions">
         <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Toggle language">
-          🌐 <span data-i18n="langSwitchBtn">اردو میں دیکھیں</span>
+          <i class="fa-solid fa-globe" style="margin-right: 6px;"></i><span data-i18n="langSwitchBtn">اردو میں دیکھیں</span>
         </button>
 
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -293,8 +303,8 @@
             </div>
 
             <div class="hero-actions">
-              <a href="#sms-tool" class="btn-primary" data-i18n="heroBtnPrimary">📱 Prepare 9771 SMS</a>
-              <a href="#eligibility" class="btn-secondary" data-i18n="heroBtnSecondary">Check Eligibility</a>
+              <a href="#sms-tool" class="btn-primary"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i><span data-i18n="heroBtnPrimary">Prepare 9771 SMS</span></a>
+              <a href="#fuel-prices" class="btn-secondary"><i class="fa-solid fa-gas-pump" style="margin-right: 8px;"></i><span data-i18n="heroBtnRates">Petrol Price Today</span></a>
             </div>
 
             <div class="hero-privacy-guarantee">
@@ -334,7 +344,7 @@
         <div class="pump-card-wrapper" id="pump-card">
           <div class="pump-card">
             <div>
-              <span class="pump-badge">⛽ <span data-i18n="pumpBadge">At the Petrol Station?</span></span>
+              <span class="pump-badge"><i class="fa-solid fa-gas-pump" style="margin-right: 6px;"></i><span data-i18n="pumpBadge">At the Petrol Station?</span></span>
               <h2 class="pump-card-title" data-i18n="pumpTitle">Already Registered? Need Your Token?</h2>
               <p class="pump-card-desc" data-i18n="pumpDesc">
                 Before fueling up, send TOK to 9771 to request your token, then present the received token at a participating petrol station according to the latest official instructions.
@@ -386,7 +396,7 @@
           <!-- Card 1: Rs 100/L -->
           <article class="stat-card">
             <div class="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <i class="fa-solid fa-tags" style="font-size: 1.35rem; color: #006837;"></i>
             </div>
             <div class="stat-value">
               <span data-i18n="stat1Val">Rs. 100</span> <span class="unit" data-i18n="stat1Unit">/ Litre</span>
@@ -398,7 +408,7 @@
           <!-- Card 2: 20 Litres -->
           <article class="stat-card">
             <div class="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+              <i class="fa-solid fa-motorcycle" style="font-size: 1.35rem; color: #006837;"></i>
             </div>
             <div class="stat-value">
               <span data-i18n="stat2Val">20</span> <span class="unit" data-i18n="stat2Unit">Litres</span>
@@ -410,7 +420,7 @@
           <!-- Card 3: 30 Litres -->
           <article class="stat-card">
             <div class="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <i class="fa-solid fa-car" style="font-size: 1.35rem; color: #006837;"></i>
             </div>
             <div class="stat-value">
               <span data-i18n="stat3Val">30</span> <span class="unit" data-i18n="stat3Unit">Litres</span>
@@ -422,7 +432,7 @@
           <!-- Card 4: 9771 Shortcode -->
           <article class="stat-card">
             <div class="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <i class="fa-solid fa-comment-sms" style="font-size: 1.35rem; color: #006837;"></i>
             </div>
             <div class="stat-value">
               <span data-i18n="stat4Val">9771</span> <span class="unit" data-i18n="stat4Unit">SMS Code</span>
@@ -433,6 +443,76 @@
         </div>
       </div>
     </section>
+
+    <!-- SECTION 2B: OFFICIAL NOTIFIED PETROL PRICES IN PAKISTAN -->
+    <section class="section-wrapper" id="fuel-prices">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="fuelRatesTag">Official Government Notified Rates</span>
+          <h2 class="section-title" data-i18n="fuelRatesTitle">Official Petrol Price in Pakistan & 9771 Subsidized Rate</h2>
+          <p class="section-desc" data-i18n="fuelRatesDesc">
+            Current official notified rates issued by the Ministry of Energy (Petroleum Division) and OGRA, compared with the Rs. 100/Litre relief subsidy.
+          </p>
+        </div>
+
+        <div class="fuel-price-grid">
+          <!-- Super Petrol (Primary Card) -->
+          <article class="fuel-price-card fuel-card-featured">
+            <div class="fuel-card-badge"><i class="fa-solid fa-shield-check"></i> <span data-i18n="fuelCardBadge">9771 Subsidized</span></div>
+            <div class="fuel-type-header">
+              <div class="fuel-icon"><i class="fa-solid fa-gas-pump"></i></div>
+              <div>
+                <h3 class="fuel-name" data-i18n="fuelPetrolName">Super Petrol (Motor Spirit)</h3>
+                <span class="fuel-sub-label" data-i18n="fuelPetrolSub">Eligible for 9771 Relief (Bikes & Small Cars)</span>
+              </div>
+            </div>
+            <div class="fuel-pricing-block">
+              <div class="price-row">
+                <span class="price-label" data-i18n="fuelOgraRate">Official Notified Rate:</span>
+                <span class="price-val-regular">Rs. 390.79 <small>/ Litre</small></span>
+              </div>
+              <div class="price-row discount-row">
+                <span class="price-label" data-i18n="fuel9771Discount">9771 Subsidy Discount:</span>
+                <span class="price-val-discount">- Rs. 100.00 <small>/ Litre</small></span>
+              </div>
+              <div class="price-row net-row">
+                <span class="price-label" data-i18n="fuelNetRate">Subsidized Petrol Price:</span>
+                <span class="price-val-subsidized">Rs. 290.79 <small>/ Litre</small></span>
+              </div>
+            </div>
+            <div class="fuel-quota-savings">
+              <i class="fa-solid fa-circle-check" style="margin-right: 4px;"></i> <span data-i18n="fuelMonthlySavings">Monthly Quota Savings: Rs. 2,000 for Motorcycles (20L) • Rs. 3,000 for 800cc Cars (30L)</span>
+            </div>
+          </article>
+
+          <!-- High Speed Diesel (HSD) -->
+          <article class="fuel-price-card">
+            <div class="fuel-type-header">
+              <div class="fuel-icon"><i class="fa-solid fa-truck"></i></div>
+              <div>
+                <h3 class="fuel-name" data-i18n="fuelDieselName">High-Speed Diesel (HSD)</h3>
+                <span class="fuel-sub-label" data-i18n="fuelDieselSub">Commercial, Transport & Heavy Vehicles</span>
+              </div>
+            </div>
+            <div class="fuel-pricing-block">
+              <div class="price-row">
+                <span class="price-label" data-i18n="fuelMarketRateLabel">Official Notified Rate:</span>
+                <span class="price-val-standard">Rs. 424.92 <small>/ Litre</small></span>
+              </div>
+              <div class="price-row">
+                <span class="price-label" data-i18n="fuelStatusLabel">Status:</span>
+                <span class="fuel-status-badge" data-i18n="fuelStatusNotified">Federal Tariff</span>
+              </div>
+            </div>
+            <p class="fuel-card-note" data-i18n="fuelDieselNote">Standard federal notification tariff. The 9771 relief scheme applies exclusively to Petrol (Motor Spirit) for motorcycles and eligible small cars.</p>
+          </article>
+        </div>
+
+        <!-- Uniform Pricing Guarantee Bar -->
+        <div class="fuel-uniform-notice">
+          <i class="fa-solid fa-circle-info"></i>
+          <span data-i18n="fuelUniformNoticeText">National Uniform Pricing Notice: Under Pakistan's Inland Freight Equalization Margin (IFEM) mechanism, official fuel prices are uniform across all cities (Karachi, Lahore, Islamabad, Rawalpindi, Peshawar, Quetta, Multan, Faisalabad). 9771 registered token holders in all cities receive the exact same Rs. 100/Litre relief subsidy.</span>
+        </div>
 
 
 
@@ -1185,6 +1265,7 @@
           <h4 class="footer-heading" data-i18n="footerNavHeading">Navigation</h4>
           <ul class="footer-links">
             <li><a href="#top" class="footer-link" data-i18n="footerHome">Home</a></li>
+            <li><a href="#fuel-prices" class="footer-link" data-i18n="navFuelPrices">Fuel Prices</a></li>
             <li><a href="#eligibility" class="footer-link" data-i18n="navEligibility">Eligibility</a></li>
             <li><a href="#sms-tool" class="footer-link" data-i18n="navSmsTool">Registration Tool</a></li>
             <li><a href="#visual-examples" class="footer-link" data-i18n="navVisualGuide">Visual Examples</a></li>
@@ -1218,10 +1299,10 @@
   <!-- STICKY MOBILE ACTION BAR -->
   <aside class="sticky-mobile-bar" aria-label="Mobile quick actions">
     <a href="#sms-tool" class="sticky-btn-apply">
-      <span>📱</span> <span data-i18n="stickyApply">Prepare SMS</span>
+      <i class="fa-solid fa-paper-plane" style="margin-right: 6px;"></i> <span data-i18n="stickyApply">Prepare SMS</span>
     </a>
     <button type="button" class="sticky-btn-tok trigger-tok-action">
-      <span>⛽</span> <span data-i18n="stickyTok">Send TOK</span>
+      <i class="fa-solid fa-gas-pump" style="margin-right: 6px;"></i> <span data-i18n="stickyTok">Send TOK</span>
     </button>
   </aside>
 
