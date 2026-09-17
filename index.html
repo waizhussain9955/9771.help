@@ -75,12 +75,6 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Petrol Price in Pakistan Today",
-            "item": "https://9771.help/#fuel-prices"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
             "name": "9771 Registration Tool",
             "item": "https://9771.help/#sms-tool"
           }
@@ -144,7 +138,7 @@
             "name": "What is the petrol price in Pakistan today with 9771 subsidy?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "While regular market petrol price is officially notified by OGRA (around Rs. 279.75/Litre), registered 9771 token beneficiaries receive an immediate Rs. 100/L discount, bringing the effective subsidized petrol rate to around Rs. 179.75/Litre."
+              "text": "Under the 9771 fuel relief scheme, registered beneficiaries receive a direct flat subsidy discount of Rs. 100 per litre on petrol off the officially notified market rate (saving up to Rs. 2,000/month for motorcycles on 20L quota and up to Rs. 3,000/month for 800cc cars on 30L quota)."
             }
           },
           {
@@ -240,7 +234,6 @@
       <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#fuel-prices" class="nav-link"><span class="nav-icon">⛽</span> <span data-i18n="navFuelPrices">Fuel Prices Today</span></a></li>
           <li><a href="#eligibility" class="nav-link"><span class="nav-icon">🏍️</span> <span data-i18n="navEligibility">Who Can Apply</span></a></li>
           <li><a href="#sms-tool" class="nav-link"><span class="nav-icon">📱</span> <span data-i18n="navSmsTool">Prepare SMS</span></a></li>
           <li><a href="#visual-examples" class="nav-link"><span class="nav-icon">💳</span> <span data-i18n="navVisualGuide">Visual Examples</span></a></li>
@@ -301,7 +294,7 @@
 
             <div class="hero-actions">
               <a href="#sms-tool" class="btn-primary" data-i18n="heroBtnPrimary">📱 Prepare 9771 SMS</a>
-              <a href="#fuel-prices" class="btn-secondary" data-i18n="heroBtnRates">⛽ Petrol Price Today</a>
+              <a href="#eligibility" class="btn-secondary" data-i18n="heroBtnSecondary">Check Eligibility</a>
             </div>
 
             <div class="hero-privacy-guarantee">
@@ -441,185 +434,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2B: LIVE PETROL & FUEL PRICES IN PAKISTAN TODAY (HIGH SEARCH INTENT) -->
-    <section class="section-wrapper" id="fuel-prices">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="fuelRatesTag">Live Daily Rates & Quota</span>
-          <h2 class="section-title" data-i18n="fuelRatesTitle">Petrol Price in Pakistan Today & 9771 Subsidized Rate</h2>
-          <p class="section-desc" data-i18n="fuelRatesDesc">
-            Official OGRA notification fuel prices in Pakistan today compared with the subsidized rate under Prime Minister Shehbaz Sharif's Rs. 100/Litre relief scheme.
-          </p>
-        </div>
 
-        <!-- Fuel Rate Cards Grid -->
-        <div class="fuel-price-grid">
-          <!-- Super Petrol (Primary Card) -->
-          <article class="fuel-price-card fuel-card-featured">
-            <div class="fuel-card-badge" data-i18n="fuelCardBadge">Most Popular • 9771 Subsidized</div>
-            <div class="fuel-type-header">
-              <div class="fuel-icon">⛽</div>
-              <div>
-                <h3 class="fuel-name" data-i18n="fuelPetrolName">Super Petrol (Motor Gasoline)</h3>
-                <span class="fuel-sub-label" data-i18n="fuelPetrolSub">Bikes, Cars & Rickshaws (Al-Makhsoos)</span>
-              </div>
-            </div>
-            <div class="fuel-pricing-block">
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelOgraRate">Official OGRA Market Rate:</span>
-                <span class="price-val-regular">Rs. 279.75 <small>/ Litre</small></span>
-              </div>
-              <div class="price-row discount-row">
-                <span class="price-label" data-i18n="fuel9771Discount">9771 PM Subsidy Discount:</span>
-                <span class="price-val-discount">- Rs. 100.00 <small>/ Litre</small></span>
-              </div>
-              <div class="price-row net-row">
-                <span class="price-label" data-i18n="fuelNetRate">Effective Subsidized Price:</span>
-                <span class="price-val-subsidized">Rs. 179.75 <small>/ Litre</small></span>
-              </div>
-            </div>
-            <div class="fuel-quota-savings">
-              <span data-i18n="fuelMonthlySavings">💡 <strong>Monthly Savings:</strong> Rs. 2,000 for Bikes (20L) • Rs. 3,000 for 800cc Cars (30L)</span>
-            </div>
-          </article>
-
-          <!-- High Speed Diesel (HSD) -->
-          <article class="fuel-price-card">
-            <div class="fuel-type-header">
-              <div class="fuel-icon">🚛</div>
-              <div>
-                <h3 class="fuel-name" data-i18n="fuelDieselName">High-Speed Diesel (HSD)</h3>
-                <span class="fuel-sub-label" data-i18n="fuelDieselSub">Heavy Vehicles, Vans & Commercial</span>
-              </div>
-            </div>
-            <div class="fuel-pricing-block">
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelMarketRateLabel">Official Market Rate:</span>
-                <span class="price-val-standard">Rs. 283.60 <small>/ Litre</small></span>
-              </div>
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelStatusLabel">Status:</span>
-                <span class="fuel-status-badge" data-i18n="fuelStatusNotified">OGRA Notified Rate</span>
-              </div>
-            </div>
-            <p class="fuel-card-note" data-i18n="fuelDieselNote">Commercial and public transport fuels follow standard federal notification tariffs.</p>
-          </article>
-
-          <!-- High Octane (HOBC 97) -->
-          <article class="fuel-price-card">
-            <div class="fuel-type-header">
-              <div class="fuel-icon">🏎️</div>
-              <div>
-                <h3 class="fuel-name" data-i18n="fuelHobcName">High Octane (HOBC 97)</h3>
-                <span class="fuel-sub-label" data-i18n="fuelHobcSub">Premium Performance & Luxury Vehicles</span>
-              </div>
-            </div>
-            <div class="fuel-pricing-block">
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelMarketRateLabel">Market Rate:</span>
-                <span class="price-val-standard">Rs. 295.00 <small>/ Litre</small></span>
-              </div>
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelCategoryLabel">Category:</span>
-                <span class="fuel-status-badge" data-i18n="fuelDeregulated">Deregulated Premium</span>
-              </div>
-            </div>
-            <p class="fuel-card-note" data-i18n="fuelHobcNote">Recommended for sports motorcycles, turbo engines, and imported luxury automobiles.</p>
-          </article>
-
-          <!-- Light Diesel Oil (LDO) & Kerosene -->
-          <article class="fuel-price-card">
-            <div class="fuel-type-header">
-              <div class="fuel-icon">🪔</div>
-              <div>
-                <h3 class="fuel-name" data-i18n="fuelKeroseneName">Kerosene Oil & Light Diesel</h3>
-                <span class="fuel-sub-label" data-i18n="fuelKeroseneSub">Mitti Ka Tel & Agricultural LDO</span>
-              </div>
-            </div>
-            <div class="fuel-pricing-block">
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelKeroseneLabel">Kerosene Oil Rate:</span>
-                <span class="price-val-standard">Rs. 173.00 <small>/ Litre</small></span>
-              </div>
-              <div class="price-row">
-                <span class="price-label" data-i18n="fuelLdoLabel">Light Diesel (LDO):</span>
-                <span class="price-val-standard">Rs. 168.50 <small>/ Litre</small></span>
-              </div>
-            </div>
-            <p class="fuel-card-note" data-i18n="fuelKeroseneNote">Standard rates applicable for tube-wells, agricultural machinery, and rural domestic heating.</p>
-          </article>
-        </div>
-
-        <!-- City-Wise Fuel Rates Grid (Local SEO) -->
-        <div class="city-rates-box">
-          <div class="city-rates-header">
-            <h3 class="city-rates-title" data-i18n="cityRatesTitle">📍 City-Wise Petrol Price in Pakistan Today (Karachi, Lahore, Islamabad, etc.)</h3>
-            <span class="city-rates-sub" data-i18n="cityRatesSub">Uniform official rate notified across all major regional hubs with minor freight margins.</span>
-          </div>
-          <div class="city-rates-table-wrap">
-            <table class="city-rates-table">
-              <thead>
-                <tr>
-                  <th data-i18n="thCity">City / Region</th>
-                  <th data-i18n="thRegularPetrol">Petrol (Super)</th>
-                  <th data-i18n="thSubsidizedPetrol">With 9771 Token</th>
-                  <th data-i18n="thDiesel">Diesel (HSD)</th>
-                  <th data-i18n="thCng">CNG Rate</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Karachi</strong> (Sindh)</td>
-                  <td>Rs. 279.75</td>
-                  <td class="table-subsidized">Rs. 179.75 / L</td>
-                  <td>Rs. 283.60</td>
-                  <td>Rs. 220 / kg</td>
-                </tr>
-                <tr>
-                  <td><strong>Lahore</strong> (Punjab)</td>
-                  <td>Rs. 279.75</td>
-                  <td class="table-subsidized">Rs. 179.75 / L</td>
-                  <td>Rs. 283.60</td>
-                  <td>Rs. 235 / kg</td>
-                </tr>
-                <tr>
-                  <td><strong>Islamabad & Rawalpindi</strong> (Federal)</td>
-                  <td>Rs. 279.75</td>
-                  <td class="table-subsidized">Rs. 179.75 / L</td>
-                  <td>Rs. 283.60</td>
-                  <td>Rs. 230 / kg</td>
-                </tr>
-                <tr>
-                  <td><strong>Peshawar</strong> (Khyber Pakhtunkhwa)</td>
-                  <td>Rs. 280.10</td>
-                  <td class="table-subsidized">Rs. 180.10 / L</td>
-                  <td>Rs. 283.95</td>
-                  <td>Rs. 240 / kg</td>
-                </tr>
-                <tr>
-                  <td><strong>Quetta</strong> (Balochistan)</td>
-                  <td>Rs. 281.20</td>
-                  <td class="table-subsidized">Rs. 181.20 / L</td>
-                  <td>Rs. 284.90</td>
-                  <td>Rs. 245 / kg</td>
-                </tr>
-                <tr>
-                  <td><strong>Multan & Faisalabad</strong></td>
-                  <td>Rs. 279.75</td>
-                  <td class="table-subsidized">Rs. 179.75 / L</td>
-                  <td>Rs. 283.60</td>
-                  <td>Rs. 235 / kg</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="notification-schedule-bar">
-            <span data-i18n="notificationScheduleText">📅 <strong>Next Petrol Price Notification Schedule:</strong> The Government of Pakistan and OGRA review and notify fuel price adjustments every 15 days (effective from the 1st and 16th of each calendar month). Register on 9771 today to lock in your Rs. 100/L relief voucher regardless of market rate surges.</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- SECTION 3: WHO CAN APPLY (WITH REAL VEHICLES PHOTOGRAPH) -->
     <section class="section-wrapper section-alt" id="eligibility">
@@ -1256,7 +1071,7 @@
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="faq-answer" data-i18n="faq12A">
-              OGRA ki janib se aam market me petrol ki qeemat Rs. 279.75 per litre hai. Lekin 9771 token holders ko seedha Rs. 100 per litre ki choot milti hai, jis se subsidized petrol rate sirf <strong>Rs. 179.75 per litre</strong> parhta hai.
+              Hukoomat ki janib se aam market me petrol ki qeemat jo bhi officially notified ho, 9771 registered token holders ko seedha <strong>Rs. 100 per litre</strong> ki subsidy choot milti hai (Bikes ko 20L quota par Rs. 2,000 aur 800cc cars ko 30L quota par Rs. 3,000 tak bachat).
             </div>
           </details>
 
@@ -1370,7 +1185,6 @@
           <h4 class="footer-heading" data-i18n="footerNavHeading">Navigation</h4>
           <ul class="footer-links">
             <li><a href="#top" class="footer-link" data-i18n="footerHome">Home</a></li>
-            <li><a href="#fuel-prices" class="footer-link" data-i18n="navFuelPrices">Fuel Prices Today</a></li>
             <li><a href="#eligibility" class="footer-link" data-i18n="navEligibility">Eligibility</a></li>
             <li><a href="#sms-tool" class="footer-link" data-i18n="navSmsTool">Registration Tool</a></li>
             <li><a href="#visual-examples" class="footer-link" data-i18n="navVisualGuide">Visual Examples</a></li>
