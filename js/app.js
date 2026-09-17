@@ -44,19 +44,20 @@ const TRANSLATIONS = {
     // Top disclaimer
     topNoticeBadge: "Independent Guide",
     topNoticeText: "9771.help is an independent informational website and is not affiliated with, operated by, or endorsed by the Government of Pakistan.",
-    langSwitchBtn: "اردو میں دیکھیں",
+    langSwitchBtn: "اردو",
 
     // Header & Nav
     brandName: "9771.help",
     brandTag: "Petrol Relief Guide",
-    navEligibility: "Who Can Apply",
-    navSmsTool: "Prepare SMS",
-    navVisualGuide: "Visual Examples",
-    navVideo: "Video Guide",
-    navTokenGuide: "Token Guide",
+    navFuelPrices: "Fuel Prices",
+    navEligibility: "Eligibility",
+    navSmsTool: "SMS Tool",
+    navVisualGuide: "Visuals",
+    navVideo: "Video",
+    navTokenGuide: "Token",
     navCalculator: "Calculator",
     navFaq: "FAQs",
-    navApplyBtn: "Apply via 9771",
+    navApplyBtn: "Apply 9771",
 
 
     // Hero
@@ -319,14 +320,15 @@ const TRANSLATIONS = {
     // Header & Nav
     brandName: "9771.help",
     brandTag: "پیٹرول ریلیف گائیڈ",
+    navFuelPrices: "پیٹرول ریٹس",
     navEligibility: "اہلیت",
-    navSmsTool: "ایس ایم ایس بنائیں",
-    navVisualGuide: "تصویری مثالیں",
-    navVideo: "ویڈیو گائیڈ",
-    navTokenGuide: "ٹوکن گائیڈ",
+    navSmsTool: "ایس ایم ایس",
+    navVisualGuide: "تصاویر",
+    navVideo: "ویڈیو",
+    navTokenGuide: "ٹوکن",
     navCalculator: "کیلکولیٹر",
-    navFaq: "عام سوالات",
-    navApplyBtn: "9771 پر اپلائی کریں",
+    navFaq: "سوالات",
+    navApplyBtn: "9771 اپلائی",
 
 
     // Hero
