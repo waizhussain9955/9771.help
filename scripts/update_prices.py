@@ -5,7 +5,7 @@
 Fetches the latest OGRA-notified petrol & diesel prices from
 https://petrolratetoday.pk/ (falls back to pakistanstoday.com.pk),
 then updates:
-  - index.html   : the 3 price spans, footer "last updated" date,
+  - index.html, petrol-prices.html: price spans, "last updated" date,
                    JSON-LD dateModified
   - js/app.js    : LAST_UPDATED (en/ur), "Notified Rate (date)" labels (en/ur)
   - sitemap.xml  : <lastmod>
@@ -117,20 +117,20 @@ def main():
 
     changed = []
 
-    # ---- index.html ----
-    p = "index.html"
-    s = open(p, encoding="utf-8").read()
-    orig = s
-    s = re.sub(r'(price-val-regular">Rs\. )[\d.]+', rf"\g<1>{fmt(petrol)}", s)
-    s = re.sub(r'(price-val-subsidized">Rs\. )[\d.]+', rf"\g<1>{fmt(subsidized)}", s)
-    s = re.sub(r'(price-val-standard">Rs\. )[\d.]+', rf"\g<1>{fmt(diesel)}", s)
-    if en_long:
-        s = re.sub(r'(<strong id="last-updated-date">)[^<]+',
-                   rf"\g<1>{en_long}", s)
-        s = re.sub(r'("dateModified": ")[^"]+', rf"\g<1>{iso}T10:00:00+05:00", s)
-    if s != orig:
-        open(p, "w", encoding="utf-8").write(s)
-        changed.append(p)
+    # ---- index.html + petrol-prices.html ----
+    for p in ["index.html", "petrol-prices.html"]:
+        s = open(p, encoding="utf-8").read()
+        orig = s
+        s = re.sub(r'(price-val-regular">Rs\. )[\d.]+', rf"\g<1>{fmt(petrol)}", s)
+        s = re.sub(r'(price-val-subsidized">Rs\. )[\d.]+', rf"\g<1>{fmt(subsidized)}", s)
+        s = re.sub(r'(price-val-standard">Rs\. )[\d.]+', rf"\g<1>{fmt(diesel)}", s)
+        if en_long:
+            s = re.sub(r'(<strong id="last-updated-date">)[^<]+',
+                       rf"\g<1>{en_long}", s)
+            s = re.sub(r'("dateModified": ")[^"]+', rf"\g<1>{iso}T10:00:00+05:00", s)
+        if s != orig:
+            open(p, "w", encoding="utf-8").write(s)
+            changed.append(p)
 
     # ---- js/app.js ----
     p = "js/app.js"
