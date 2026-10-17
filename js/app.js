@@ -19,8 +19,8 @@
 
 // Update this date whenever official guidelines are updated
 const LAST_UPDATED = {
-  en: "September 17, 2026",
-  ur: "17 ستمبر 2026"
+  en: "October 17, 2026",
+  ur: "17 اکتوبر 2026"
 };
 
 // Configurable Province Codes (First Letter Logic)
@@ -112,7 +112,7 @@ const TRANSLATIONS = {
     carDesc: "Cars with engine capacity up to 800cc. Eligible for up to 30 litres per month. Eligibility depends on the vehicle records used by the scheme.",
     eligibilityQuota20: "Max 20 Litres / Month",
     eligibilityQuota30: "Max 30 Litres / Month",
-    eligibilityNotice: "Important: The announced scheme is targeted at eligible non-commercial users. Eligibility and registration details are verified through the relevant government systems. Check the latest official rules before applying.",
+    eligibilityNotice: "Important: The announced scheme is targeted at eligible non-commercial users, limited to one vehicle per owner. Eligibility and registration details are verified through the relevant government systems. Check the latest official rules before applying.",
 
     // Section 4: Interactive SMS Generator
     toolTag: "Interactive Helper",
@@ -134,7 +134,7 @@ const TRANSLATIONS = {
     btnSendSms: "📱 Send SMS to 9771",
     btnCopySms: "📋 Copy SMS",
     btnReset: "Clear Form",
-    terminalTip: "Eligibility and registration details are verified through the relevant government systems.",
+    terminalTip: "Eligibility and registration details are verified through the relevant government systems. Always match the latest official SMS format before sending.",
 
     // Section 5: Roadmap (Neutral Token Presentation)
     roadTag: "Process",
@@ -165,7 +165,7 @@ const TRANSLATIONS = {
     visualGuideDesc: "Visual examples showing where to find your vehicle registration date and how the actual 9771 SMS conversation looks.",
     cardGuideTitle: "Where to Find Vehicle Registration Date",
     cardGuideDesc: "Look at your vehicle Excise Smart Card or registration book. Look specifically for 'Date of Reg' (not 'Card Issue Date'). Format must be DDMMYYYY.",
-    smsGuideTitle: "Real Mobile SMS Conversation Example",
+    smsGuideTitle: "Sample Mobile SMS Conversation Example",
     smsGuideDesc: "See how your sent REG & TOK messages and official replies from 9771 will appear in your phone messaging app.",
 
     // Video Guide Section
@@ -194,7 +194,7 @@ const TRANSLATIONS = {
     // Section 6B: Comprehensive Registration Guide
     guideSectionTag: "In-Depth Portal Guide",
     guideSectionTitle: "9771 PM Petrol Relief Scheme 2026: Complete Registration & Eligibility",
-    guideSectionDesc: "Everything you need to know about pmfuelrelief.pk, provincial quotas, token validation, and SMS troubleshooting.",
+    guideSectionDesc: "Everything you need to know about provincial quotas, token validation, and SMS troubleshooting.",
     guideProvinceTitle: "Petrol Subsidy Online Apply Across Provinces (Punjab, Sindh, KPK, Balochistan & ICT)",
     guideProvinceText1: "The PM Fuel Relief Scheme 2026 covers all four provinces and federal territories across Pakistan. When sending your REG SMS, ensuring the correct 1-letter provincial excise code is vital:",
     guideProvinceNote: "💡 Pro-Tip for Punjab Residents: You can verify your exact registration date and active owner CNIC using the MTMIS Punjab vehicle search tool prior to sending your 9771 SMS.",
@@ -202,8 +202,8 @@ const TRANSLATIONS = {
     guideTokText1: "The 9771 scheme operates in two distinct phases: REG (one-time eligibility verification) and TOK (on-demand digital fuel voucher code).",
     guideTokRule1Title: "When to Send TOK:",
     guideTokRule1Desc: "Once your initial registration is verified, text TOK to 9771 from your registered mobile SIM right before you visit an authorized petrol pump.",
-    guideTokRule2Title: "Token Validity (10-Day Period):",
-    guideTokRule2Desc: "Each fuel token voucher code received via SMS remains active for 10 days. If you do not use it within 10 days, the token automatically expires without penalty. You can simply text TOK to 9771 again to generate a fresh token.",
+    guideTokRule2Title: "Token Quota Cycle:",
+    guideTokRule2Desc: "Motorcycles, rickshaws and Qingqis receive a weekly token worth Rs. 500 (5 litres), up to 20 litres per month. Cars up to 800cc receive 10 litres every 10 days, up to 30 litres per month. Each token SMS states your permitted quantity and validity period \u2014 request a fresh TOK before every fill-up.",
     guideTokRule3Title: "Fuel Station Redemption:",
     guideTokRule3Desc: "Show the received SMS containing your unique 6-to-10 digit token number to the fuel station cashier. The attendant enters the code into the official POS terminal to apply the flat Rs. 100/Litre deduction off your bill.",
     guideTroubleTitle: "9771 SMS Registration Failed? Top Reasons & Instant Solutions",
@@ -216,11 +216,11 @@ const TRANSLATIONS = {
     trouble3Text: "Avoid irregular spacing. Ensure your vehicle number is written concisely (e.g., KHI1234 or LEB-21-4560) with exactly one single space between each parameter in the REG message.",
     trouble4Title: "Engine Capacity Exceeds 800cc:",
     trouble4Text: "The four-wheeler subsidy is strictly restricted to passenger cars with engine displacement up to 800cc (such as Suzuki Mehran or 800cc Alto). 1000cc and higher vehicles are automatically rejected by the excise database.",
-    guideHelplineTitle: "Official 9771 & 9772 Helplines & Sample Confirmation SMS",
-    guideHelplineText: "The federal government has established two dedicated channels to support the public and ensure smooth operations at fuel stations:",
+    guideHelplineTitle: "Official 9771 Helpline, Complaint System & Sample Confirmation SMS",
+    guideHelplineText: "The federal government has set up support channels for registration, token and fuel-station issues:",
     hlCitizenDesc: "Citizen Registration & SMS Shortcode",
-    hlDealerDesc: "Petrol Pump Dealer Helpline & Complaints",
-    sampleSmsTag: "Sample Official Confirmation SMS Received from 9771:",
+    hlDealerDesc: "Fuel Complaint option \u2014 report issues, attach token photo & track your complaint",
+    sampleSmsTag: "Sample Confirmation SMS Received from 9771:",
 
     // Section 7: Anti Scam
     scamTitle: "Stay Safe From Fake Registration Websites",
@@ -228,9 +228,9 @@ const TRANSLATIONS = {
     scamStrong: "9771.help is an independent educational and registration-assistance guide. We never ask for payments, passwords, or personal submissions.",
 
     // Section 8: Official Source
-    officialBadge: "Designated Official Channel",
-    officialTitle: "Verify Latest Information with Official Portal",
-    officialDesc: "For official scheme guidelines, rollout updates in your province, and customer support, always consult the Government's designated portal.",
+    officialBadge: "Official Information Portal",
+    officialTitle: "Verify Latest Information with the Official Portal",
+    officialDesc: "For official scheme guidelines, rollout updates in your province, and customer support, always consult the Government's official information portal.",
     btnOfficial: "Visit pmfuelrelief.pk →",
 
     // Section 9: FAQs
@@ -276,21 +276,21 @@ const TRANSLATIONS = {
     stickyTok: "Send TOK",
 
     navFuelPrices: "Fuel Prices Today",
-    heroKeywordSub: "Shahbaz Sharif Rs. 100 Petrol Relief Scheme • Official 9771 REG SMS & TOK Guide",
+    heroKeywordSub: "Shahbaz Sharif Rs. 100 Petrol Relief Scheme • 9771 Fuel Quota Online Apply • REG SMS & TOK Guide at 9771.help",
     heroBtnRates: "⛽ Petrol Price Today",
     fuelRatesTag: "Live Daily Rates & Quota",
     fuelRatesTitle: "Petrol Price in Pakistan Today & 9771 Subsidized Rate",
-    fuelRatesDesc: "Official OGRA notification fuel prices in Pakistan today compared with the subsidized rate under Prime Minister Shehbaz Sharif's Rs. 100/Litre relief scheme.",
+    fuelRatesDesc: "Latest OGRA-notified fuel prices in Pakistan compared with the subsidized rate under the Rs. 100/Litre relief scheme (revised periodically).",
     fuelCardBadge: "Most Popular • 9771 Subsidized",
     fuelPetrolName: "Super Petrol (Motor Gasoline)",
     fuelPetrolSub: "Bikes, Cars & Rickshaws (Al-Makhsoos)",
-    fuelOgraRate: "Official OGRA Market Rate:",
+    fuelOgraRate: "Notified Rate (17 Oct 2026):",
     fuel9771Discount: "9771 PM Subsidy Discount:",
     fuelNetRate: "Effective Subsidized Price:",
     fuelMonthlySavings: "💡 Monthly Savings: Rs. 2,000 for Bikes (20L) • Rs. 3,000 for 800cc Cars (30L)",
     fuelDieselName: "High-Speed Diesel (HSD)",
     fuelDieselSub: "Heavy Vehicles, Vans & Commercial",
-    fuelMarketRateLabel: "Official Market Rate:",
+    fuelMarketRateLabel: "Notified Rate (17 Oct 2026):",
     fuelStatusLabel: "Status:",
     fuelStatusNotified: "OGRA Notified Rate",
     fuelDieselNote: "Commercial and public transport fuels follow standard federal notification tariffs.",
@@ -303,17 +303,17 @@ const TRANSLATIONS = {
     heroBtnRates: "Petrol Price Today",
     fuelRatesTag: "Official Government Notified Rates",
     fuelRatesTitle: "Official Petrol Price in Pakistan & 9771 Subsidized Rate",
-    fuelRatesDesc: "Current official notified rates issued by the Ministry of Energy (Petroleum Division) and OGRA, compared with the Rs. 100/Litre relief subsidy.",
+    fuelRatesDesc: "Current notified rates issued by the Ministry of Energy (Petroleum Division) and OGRA, compared with the Rs. 100/Litre relief subsidy. Fuel prices are revised periodically \u2014 always confirm the latest official notification.",
     fuelCardBadge: "9771 Subsidized",
     fuelPetrolName: "Super Petrol (Motor Spirit)",
     fuelPetrolSub: "Eligible for 9771 Relief (Bikes & Small Cars)",
-    fuelOgraRate: "Official Notified Rate:",
+    fuelOgraRate: "Notified Rate (17 Oct 2026):",
     fuel9771Discount: "9771 Subsidy Discount:",
     fuelNetRate: "Subsidized Petrol Price:",
     fuelMonthlySavings: "Monthly Quota Savings: Rs. 2,000 for Motorcycles (20L) • Rs. 3,000 for 800cc Cars (30L)",
     fuelDieselName: "High-Speed Diesel (HSD)",
     fuelDieselSub: "Commercial, Transport & Heavy Vehicles",
-    fuelMarketRateLabel: "Official Notified Rate:",
+    fuelMarketRateLabel: "Notified Rate (17 Oct 2026):",
     fuelStatusLabel: "Status:",
     fuelStatusNotified: "Federal Tariff",
     fuelDieselNote: "Standard federal notification tariff. The 9771 relief scheme applies exclusively to Petrol (Motor Spirit) for motorcycles and eligible small cars.",
@@ -333,7 +333,13 @@ const TRANSLATIONS = {
     faq15Q: "Who is eligible for fuel subsidy?",
     faq15A: "Eligible citizens include registered owners of motorcycles, scooters, auto-rickshaws, Qingqi 3-wheelers, and small cars up to 800cc (e.g., Suzuki Mehran, Alto) verified against provincial excise records and government socio-economic criteria.",
     faq16Q: "What is the current petroleum levy in Pakistan for 2026?",
-    faq16A: "In 2026, the Petroleum Development Levy (PDL) set by the Government under OGRA pricing guidelines is capped around Rs. 60 to Rs. 70 per litre on petrol and high-speed diesel. The 9771 scheme cushions this inflation by offering a direct Rs. 100/L subsidy token.",
+    faq16A: "The Petroleum Development Levy (PDL) is a federal tax included in the notified petrol and diesel price, and it is revised from time to time. For the exact current levy, check the latest OGRA / Petroleum Division notification. The 9771 scheme gives eligible users a direct Rs. 100/L discount regardless of the levy component.",
+    faq17Q: "Is the 9771 registration SMS free of charge?",
+    faq17A: "Yes. The government has directed that registration via SMS to 9771 be free of cost. The government never asks for registration fees, OTPs, or bank details \u2014 anyone demanding payment or personal codes in the name of this scheme is running a scam.",
+    faq18Q: "Can I register more than one vehicle? Is there a vehicle age limit?",
+    faq18A: "Relief is limited to one vehicle per owner. Vehicles registered on or after 1 January 2006 (about 20 years old or newer) are eligible. The earlier 5-litre minimum purchase condition for motorcycles and three-wheelers has been removed, and SMS token redemption now also works at fuel stations in areas without internet connectivity. Motorcycle and three-wheeler users can apply even if they are not the registered owner; car owners must be the registered owner.",
+    faq19Q: "Is the scheme still running? How many people have registered?",
+    faq19A: "Yes. By late September 2026 more than 2.2 million citizens had registered and around 1.9 million tokens had been issued. The Petroleum Minister has said the scheme can continue for up to 10 months if needed \u2014 no fixed end date has been announced. The Prime Minister has also directed that public transport fares must not be increased on account of the subsidy.",
 
     // Modal & Toast
     modalTitle: "How to Send Your SMS",
@@ -415,7 +421,7 @@ const TRANSLATIONS = {
     carDesc: "وہ گاڑیاں جن کا انجن 800cc تک ہو۔ 30 لیٹر ماہانہ کوٹہ۔ اہلیت کا دارومدار اسکیم میں استعمال ہونے والے گاڑیوں کے سرکاری ریکارڈ پر ہے۔",
     eligibilityQuota20: "زیادہ سے زیادہ 20 لیٹر / مہینہ",
     eligibilityQuota30: "زیادہ سے زیادہ 30 لیٹر / مہینہ",
-    eligibilityNotice: "اہم نوٹ: یہ اسکیم اہل غیر تجارتی صارفین کے لیے ہے۔ اہلیت اور رجسٹریشن کی تفصیلات متعلقہ سرکاری نظام کے ذریعے تصدیق کی جاتی ہیں۔ اپلائی کرنے سے پہلے سرکاری قواعد ضرور دیکھیں۔",
+    eligibilityNotice: "اہم نوٹ: یہ اسکیم اہل غیر تجارتی صارفین کے لیے ہے اور ایک مالک کی ایک گاڑی تک محدود ہے۔ اہلیت اور رجسٹریشن کی تفصیلات متعلقہ سرکاری نظام کے ذریعے تصدیق کی جاتی ہیں۔ اپلائی کرنے سے پہلے سرکاری قواعد ضرور دیکھیں۔",
 
     // Section 4: Interactive SMS Generator
     toolTag: "ایس ایم ایس ٹول",
@@ -437,7 +443,7 @@ const TRANSLATIONS = {
     btnSendSms: "📱 9771 پر ایس ایم ایس بھیجیں",
     btnCopySms: "📋 ایس ایم ایس کاپی کریں",
     btnReset: "فارم خالی کریں",
-    terminalTip: "اہلیت اور رجسٹریشن کی تفصیلات متعلقہ سرکاری نظام کے ذریعے تصدیق کی جاتی ہیں۔",
+    terminalTip: "اہلیت اور رجسٹریشن کی تفصیلات متعلقہ سرکاری نظام کے ذریعے تصدیق کی جاتی ہیں۔ بھیجنے سے پہلے تازہ ترین سرکاری ایس ایم ایس فارمیٹ سے ضرور ملائیں۔",
 
     // Section 5: Roadmap
     roadTag: "طریقہ کار",
@@ -468,7 +474,7 @@ const TRANSLATIONS = {
     visualGuideDesc: "گاڑی کے رجسٹریشن کارڈ پر تاریخ تلاش کرنے اور موبائل پر 9771 کے پیغامات کا تصویری نمونہ۔",
     cardGuideTitle: "گاڑی کی رجسٹریشن کی تاریخ کہاں ہوتی ہے؟",
     cardGuideDesc: "اپنی گاڑی کے ایکسائز اسمارٹ کارڈ یا بک پر 'Date of Reg' دیکھیں۔ تاریخ کا فارمیٹ DDMMYYYY ہونا چاہیے (مثلاً 15 اگست 2020 کو 15082020 لکھیں)۔",
-    smsGuideTitle: "موبائل پر 9771 چیٹ کا اصل نمونہ",
+    smsGuideTitle: "موبائل پر 9771 چیٹ کا نمونہ",
     smsGuideDesc: "دیکھیں کہ آپ کا بھیجا گیا REG اور TOK میسج اور 9771 سے موصول ہونے والا جواب موبائل پر کیسا نظر آتا ہے۔",
 
     // Video Guide Section
@@ -497,7 +503,7 @@ const TRANSLATIONS = {
     // Section 6B: Comprehensive Registration Guide
     guideSectionTag: "جامع معلوماتی گائیڈ",
     guideSectionTitle: "9771 پی ایم پیٹرول ریلیف اسکیم 2026: مکمل رجسٹریشن اور اہلیت کی گائیڈ",
-    guideSectionDesc: "سرکاری پورٹل pmfuelrelief.pk، صوبائی کوٹہ، ٹوکن ویلیڈٹی اور ایس ایم ایس کے مسائل کے حل کی تمام تفصیلات۔",
+    guideSectionDesc: "صوبائی کوٹہ، ٹوکن کی توثیق اور ایس ایم ایس مسائل کے حل کی تمام تفصیلات۔",
     guideProvinceTitle: "صوبائی سطح پر پیٹرول سبسڈی رجسٹریشن (پنجاب، سندھ، خیبرپختونخوا، بلوچستان اور اسلام آباد)",
     guideProvinceText1: "وزیراعظم فیول ریلیف اسکیم 2026 پاکستان کے تمام صوبوں اور وفاقی علاقوں کے لیے ہے۔ ایس ایم ایس بھیجتے وقت اپنے صوبے کا درست 1 ہندسے والا کوڈ لکھنا لازمی ہے:",
     guideProvinceNote: "💡 پنجاب کے شہریوں کے لیے مفید مشورہ: آپ 9771 پر میسج بھیجنے سے پہلے MTMIS پنجاب پورٹل پر گاڑی کی رجسٹریشن کی تاریخ اور اپنے شناختی کارڈ کی تصدیق آن لائن چیک کر سکتے ہیں۔",
@@ -505,8 +511,8 @@ const TRANSLATIONS = {
     guideTokText1: "9771 اسکیم دو مراحل پر مشتمل ہے: پہلے REG کے ذریعے رجسٹریشن ہوتی ہے، پھر پٹرول ڈلوانے سے پہلے TOK کے ذریعے واؤچر حاصل کیا جاتا ہے۔",
     guideTokRule1Title: "TOK کب بھیجیں:",
     guideTokRule1Desc: "جب آپ کی رجسٹریشن منظور ہو جائے تو پٹرول پمپ جانے سے کچھ دیر پہلے اپنی رجسٹرڈ سم سے 9771 پر TOK لکھ کر بھیجیں۔",
-    guideTokRule2Title: "ٹوکن کی میعاد (10 دن):",
-    guideTokRule2Desc: "موصول ہونے والا فیول ٹوکن کوڈ 10 دن تک قابلِ استعمال رہتا ہے۔ اگر 10 دن میں استعمال نہ ہو تو یہ خود بخود ایکسپائر ہو جاتا ہے، جس کے بعد آپ دوبارہ TOK بھیج کر نیا کوڈ حاصل کر سکتے ہیں۔",
+    guideTokRule2Title: "ٹوکن کا کوٹہ سائیکل:",
+    guideTokRule2Desc: "موٹر سائیکل، رکشے اور چنگچی کو ہر ہفتے 500 روپے (5 لیٹر) کا ٹوکن ملتا ہے، زیادہ سے زیادہ 20 لیٹر ماہانہ۔ 800 سی سی تک کی کاروں کو ہر 10 دن میں 10 لیٹر، زیادہ سے زیادہ 30 لیٹر ماہانہ۔ ہر ٹوکن ایس ایم ایس میں مقدار اور میعاد درج ہوتی ہے \u2014 ہر بار ایندھن لینے سے پہلے نیا TOK بھیجیں۔",
     guideTokRule3Title: "پٹرول پمپ پر ٹوکن کا استعمال:",
     guideTokRule3Desc: "پٹرول پمپ پر کیشیئر یا عملے کو اپنا موصول شدہ ٹوکن نمبر دکھائیں۔ وہ سرکاری مشین میں ٹوکن درج کر کے بل میں سے 100 روپے فی لیٹر رعایت منہا کر دے گا۔",
     guideTroubleTitle: "9771 رجسٹریشن فیل ہونے کی وجوہات اور فوری حل",
@@ -519,11 +525,11 @@ const TRANSLATIONS = {
     trouble3Text: "گاڑی کا نمبر درست اور بغیر فالتو فاصلے کے لکھیں، اور ہر لفظ کے درمیان صرف ایک اسپیس دیں۔",
     trouble4Title: "گاڑی کا انجن 800cc سے بڑا ہونا:",
     trouble4Text: "کاروں کے لیے یہ رعایت صرف 800cc تک کی گاڑیوں (مثلاً مہران، آلٹو 800cc) کے لیے ہے۔ 1000cc یا اس سے بڑی گاڑیاں ایکسائز ڈیٹا بیس سے مسترد ہو جاتی ہیں۔",
-    guideHelplineTitle: "سرکاری ہیلپ لائن 9771 اور 9772 اور تصدیقی ایس ایم ایس کا نمونہ",
-    guideHelplineText: "حکومتِ پاکستان نے عوام اور پٹرول پمپ ڈیلرز کی سہولت کے لیے دو ہیلپ لائنز مختص کی ہیں:",
+    guideHelplineTitle: "سرکاری ہیلپ لائن 9771، شکایت کا نظام اور تصدیقی ایس ایم ایس کا نمونہ",
+    guideHelplineText: "حکومتِ پاکستان نے رجسٹریشن، ٹوکن اور پٹرول پمپ کے مسائل کے لیے سپورٹ کے ذرائع بنائے ہیں:",
     hlCitizenDesc: "عوامی رجسٹریشن اور ٹوکن شارٹ کوڈ",
-    hlDealerDesc: "پٹرول پمپ شکایات اور ڈیلر ہیلپ لائن",
-    sampleSmsTag: "9771 سے موصول ہونے والے اصل تصدیقی ایس ایم ایس کا نمونہ:",
+    hlDealerDesc: "فیول شکایت کا آپشن \u2014 مسئلہ رپورٹ کریں، ٹوکن کی تصویر لگائیں اور شکایت ٹریک کریں",
+    sampleSmsTag: "9771 سے موصول ہونے والے تصدیقی ایس ایم ایس کا نمونہ:",
 
     // Section 7: Anti Scam
     scamTitle: "جعلی رجسٹریشن ویب سائٹس سے ہوشیار رہیں!",
@@ -531,9 +537,9 @@ const TRANSLATIONS = {
     scamStrong: "9771.help صرف ایک معلوماتی رہنما ویب سائٹ ہے۔ ہم کبھی بھی پاس ورڈ یا پیسوں کا مطالبہ نہیں کرتے۔",
 
     // Section 8: Official Source
-    officialBadge: "نامزد سرکاری ذریعہ",
+    officialBadge: "سرکاری معلوماتی پورٹل",
     officialTitle: "تازہ ترین تفصیلات سرکاری پورٹل سے تصدیق کریں",
-    officialDesc: "سرکاری پالیسی، صوبائی شیڈول اور رہنمائی کے لیے ہمیشہ حکومت کے نامزد پورٹل سے تصدیق کریں۔",
+    officialDesc: "سرکاری پالیسی، صوبائی اپڈیٹس اور رہنمائی کے لیے ہمیشہ حکومت کے سرکاری معلوماتی پورٹل سے تصدیق کریں۔",
     btnOfficial: "سرکاری پورٹل (pmfuelrelief.pk) دیکھیں ←",
 
     // Section 9: FAQs
@@ -579,21 +585,21 @@ const TRANSLATIONS = {
     stickyTok: "TOK حاصل کریں",
 
     navFuelPrices: "آج کے پیٹرول ریٹس",
-    heroKeywordSub: "شہباز شریف 100 روپے پیٹرول ریلیف اسکیم • آفیشل 9771 ایس ایم ایس اور ٹوکن گائیڈ",
+    heroKeywordSub: "شہباز شریف 100 روپے پیٹرول ریلیف اسکیم • 9771 فیول کوٹہ آن لائن اپلائی • ایس ایم ایس اور ٹوکن گائیڈ 9771.help پر",
     heroBtnRates: "⛽ آج کے پیٹرول ریٹس",
     fuelRatesTag: "روزانہ ریٹس اور کوٹہ",
     fuelRatesTitle: "پاکستان میں آج پیٹرول کی قیمت اور 9771 رعایتی ریٹ",
-    fuelRatesDesc: "اوگرا (OGRA) کے نوٹیفائی کردہ پیٹرول ریٹس کا موازنہ وزیرِ اعظم شہباز شریف کی 100 روپے فی لیٹر ریلیف اسکیم کے ساتھ۔",
+    fuelRatesDesc: "اوگرا کے تازہ ترین نوٹیفائی کردہ پیٹرول ریٹس کا موازنہ 100 روپے فی لیٹر ریلیف اسکیم کے ساتھ (قیمتیں وقتاً فوقتاً تبدیل ہوتی ہیں)۔",
     fuelCardBadge: "سب سے زیادہ استعمال • 9771 رعایتی",
     fuelPetrolName: "سپر پیٹرول (موٹر گیسولین)",
     fuelPetrolSub: "موٹر سائیکل، کار اور رکشہ کے لیے (مخصوص)",
-    fuelOgraRate: "سرکاری اوگرا مارکیٹ ریٹ:",
+    fuelOgraRate: "نوٹیفائیڈ قیمت (17 اکتوبر 2026):",
     fuel9771Discount: "9771 پی ایم اسکیم رعایت:",
     fuelNetRate: "رعایت کے بعد حتمی قیمت:",
     fuelMonthlySavings: "💡 ماہانہ بچت: بائیک کے لیے 2,000 روپے (20 لیٹر) • 800cc کار کے لیے 3,000 روپے (30 لیٹر)",
     fuelDieselName: "ہائی اسپیڈ ڈیزل (HSD)",
     fuelDieselSub: "ہیوی گاڑیاں، وین اور کمرشل ٹرانسپورٹ",
-    fuelMarketRateLabel: "سرکاری مارکیٹ ریٹ:",
+    fuelMarketRateLabel: "نوٹیفائیڈ قیمت (17 اکتوبر 2026):",
     fuelStatusLabel: "حیثیت:",
     fuelStatusNotified: "اوگرا نوٹیفائیڈ ریٹ",
     fuelDieselNote: "کمرشل اور پبلک ٹرانسپورٹ کے ایندھن پر فیڈرل ٹیرف کے مطابق ریٹ لاگو ہوتے ہیں۔",
@@ -605,17 +611,17 @@ const TRANSLATIONS = {
     heroBtnRates: "آج پیٹرول کی قیمت",
     fuelRatesTag: "سرکاری نوٹیفائیڈ ریٹس",
     fuelRatesTitle: "پاکستان میں پیٹرول کی سرکاری قیمت اور 9771 رعایتی ریٹ",
-    fuelRatesDesc: "وزارتِ توانائی (پیٹرولیم ڈویژن) اور اوگرا کی طرف سے جاری کردہ تازہ ترین سرکاری قیمتیں اور 9771 اسکیم کے تحت 100 روپے فی لیٹر رعایت۔",
+    fuelRatesDesc: "وزارتِ توانائی (پیٹرولیم ڈویژن) اور اوگرا کی طرف سے جاری کردہ تازہ ترین قیمتیں اور 9771 اسکیم کے تحت 100 روپے فی لیٹر رعایت۔ ایندھن کی قیمتیں وقتاً فوقتاً تبدیل ہوتی ہیں \u2014 ہمیشہ تازہ ترین سرکاری نوٹیفکیشن چیک کریں۔",
     fuelCardBadge: "9771 رعایت لاگو",
     fuelPetrolName: "سپر پیٹرول (موٹر اسپرٹ)",
     fuelPetrolSub: "9771 فیول ریلیف کے لیے اہل (موٹر سائیکل اور چھوٹی کاریں)",
-    fuelOgraRate: "سرکاری نوٹیفائیڈ قیمت:",
+    fuelOgraRate: "نوٹیفائیڈ قیمت (17 اکتوبر 2026):",
     fuel9771Discount: "9771 سبسڈی رعایت:",
     fuelNetRate: "رعایتی پیٹرول کی قیمت:",
     fuelMonthlySavings: "ماہانہ بچت کا کوٹہ: موٹر سائیکلوں کے لیے 2,000 روپے (20 لیٹر) • 800cc کاروں کے لیے 3,000 روپے (30 لیٹر)",
     fuelDieselName: "ہائی اسپیڈ ڈیزل (HSD)",
     fuelDieselSub: "کمرشل، پبلک ٹرانسپورٹ اور بھاری گاڑیاں",
-    fuelMarketRateLabel: "سرکاری مارکیٹ قیمت:",
+    fuelMarketRateLabel: "نوٹیفائیڈ قیمت (17 اکتوبر 2026):",
     fuelStatusLabel: "حیثیت:",
     fuelStatusNotified: "وفاقی ریگولیٹڈ ریٹ",
     fuelDieselNote: "وفاقی اوگرا کا معیاری نوٹیفائیڈ ریٹ۔ 9771 ریلیف اسکیم صرف موٹر سائیکلوں اور چھوٹی کاروں کے پیٹرول کے لیے مختص ہے۔",
@@ -635,7 +641,13 @@ const TRANSLATIONS = {
     faq15Q: "فیول سبسڈی کے لیے کون اہل ہے؟ (Who is eligible for fuel subsidy)",
     faq15A: "اہل افراد میں تمام رجسٹرڈ موٹر سائیکلز، اسکوٹرز، رکشہ، چنگ چی، اور 800cc تک کی چھوٹی کاریں (مہران، آلٹو وغیرہ) شامل ہیں جن کا ایکسائز ریکارڈ اور شناختی کارڈ درست ہو۔",
     faq16Q: "پاکستان میں 2026 کے لیے موجودہ پیٹرولیم لیوی (Petroleum Levy) کیا ہے؟",
-    faq16A: "پاکستان میں فنانس ایکٹ اور اوگرا (OGRA) کے مطابق پیٹرولیم لیوی (PDL) تقریباً 60 سے 70 روپے فی لیٹر تک ہے۔ 9771 فیول اسکیم شہریوں کو اس مہنگائی سے بچانے کے لیے براہِ راست 100 روپے فی لیٹر کی سبسڈی فراہم کرتی ہے۔",
+    faq16A: "پیٹرولیم ڈیویلپمنٹ لیوی (PDL) ایک وفاقی ٹیکس ہے جو نوٹیفائی کردہ قیمت میں شامل ہوتا ہے اور وقتاً فوقتاً تبدیل ہوتا ہے۔ درست موجودہ لیوی کے لیے تازہ ترین اوگرا / پیٹرولیم ڈویژن نوٹیفکیشن چیک کریں۔ 9771 اسکیم کے تحت اہل صارفین کو لیوی سے قطع نظر 100 روپے فی لیٹر رعایت ملتی ہے۔",
+    faq17Q: "کیا 9771 پر رجسٹریشن ایس ایم ایس مفت ہے؟",
+    faq17A: "جی ہاں۔ حکومت کی ہدایت کے مطابق 9771 پر رجسٹریشن ایس ایم ایس مفت ہے۔ حکومت کبھی رجسٹریشن فیس، او ٹی پی یا بینک تفصیلات نہیں مانگتی \u2014 جو بھی اس اسکیم کے نام پر پیسے یا ذاتی کوڈ مانگے وہ فراڈ کر رہا ہے۔",
+    faq18Q: "کیا ایک سے زیادہ گاڑیاں رجسٹر ہو سکتی ہیں؟ گاڑی کی عمر کی کوئی حد ہے؟",
+    faq18A: "رعایت ایک مالک کی ایک گاڑی تک محدود ہے۔ یکم جنوری 2006 یا اس کے بعد رجسٹرڈ گاڑیاں (تقریباً 20 سال یا نئی) اہل ہیں۔ موٹر سائیکل اور تھری وہیلرز کے لیے 5 لیٹر کی کم از کم خریداری کی شرط ختم کر دی گئی ہے، اور اب انٹرنیٹ کے بغیر علاقوں کے پٹرول پمپس پر بھی ایس ایم ایس ٹوکن چلتا ہے۔ موٹر سائیکل اور تھری وہیلر صارفین مالک نہ ہونے کے باوجود اپلائی کر سکتے ہیں؛ کار مالکان کا رجسٹرڈ مالک ہونا ضروری ہے۔",
+    faq19Q: "کیا اسکیم اب بھی جاری ہے؟ کتنے لوگ رجسٹر ہو چکے ہیں؟",
+    faq19A: "جی ہاں۔ ستمبر 2026 کے آخر تک 22 لاکھ سے زیادہ شہری رجسٹر ہو چکے تھے اور تقریباً 19 لاکھ ٹوکن جاری ہوئے تھے۔ پیٹرولیم وزیر کے مطابق ضرورت پڑنے پر اسکیم 10 ماہ تک جاری رہ سکتی ہے \u2014 کوئی حتمی اختتامی تاریخ اعلان نہیں ہوئی۔ وزیرِ اعظم نے یہ بھی ہدایت کی ہے کہ سبسڈی کی وجہ سے پبلک ٹرانسپورٹ کے کرایے نہیں بڑھنے چاہئیں۔",
 
     // Modal & Toast
     modalTitle: "ایس ایم ایس بھیجنے کا طریقہ",

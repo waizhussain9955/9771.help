@@ -3088,3 +3088,59 @@ html[dir="rtl"] .toast-container {
   flex-shrink: 0;
 }
 
+
+/* ==========================================================================
+   Oct 2026 Responsive Refinements (content-update pass — behavior only,
+   no visual redesign)
+   ========================================================================== */
+
+/* 1. Step code pill: never bleed outside its card on very small phones */
+.step-code-pill {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 2. Toast must appear ABOVE the sticky mobile action bar, not under it */
+@media (max-width: 768px) {
+  .toast-container {
+    bottom: calc(68px + 1.25rem + env(safe-area-inset-bottom));
+    right: 1rem;
+    left: 1rem;
+  }
+  html[dir="rtl"] .toast-container {
+    right: 1rem;
+    left: 1rem;
+  }
+}
+
+/* 3. Scam warning banner: stack icon above text on phones */
+@media (max-width: 600px) {
+  .scam-warning-card {
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.25rem;
+  }
+}
+
+/* 4. Header breathing room on narrow phones (390px class devices) */
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 0.35rem;
+  }
+  .brand-logo {
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  .brand-name {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .brand-tag {
+    display: none;
+  }
+  .header-right-actions {
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+}
