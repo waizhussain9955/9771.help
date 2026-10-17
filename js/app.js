@@ -57,6 +57,11 @@ const TRANSLATIONS = {
     navTokenGuide: "Token",
     navCalculator: "Calculator",
     navFaq: "FAQs",
+    navHome: "Home",
+    navGuides: "Guides",
+    navRegistration: "Registration",
+    navTok: "TOK Token",
+    navComplaints: "Complaints",
     navApplyBtn: "Apply 9771",
 
 
@@ -366,6 +371,11 @@ const TRANSLATIONS = {
     navTokenGuide: "ٹوکن",
     navCalculator: "کیلکولیٹر",
     navFaq: "سوالات",
+    navHome: "ہوم",
+    navGuides: "گائیڈز",
+    navRegistration: "رجسٹریشن",
+    navTok: "ٹوکن",
+    navComplaints: "شکایات",
     navApplyBtn: "9771 اپلائی",
 
 
@@ -746,15 +756,23 @@ function initCleanAnchorScroll() {
 
   // Intercept all anchor clicks with hash href
   document.addEventListener("click", (e) => {
-    const anchor = e.target.closest('a[href^="#"]');
+    const anchor = e.target.closest('a[href^="#"], a[href^="/#"]');
     if (!anchor) return;
 
     const href = anchor.getAttribute("href");
-    if (!href || href === "#") return;
+    if (!href || href === "#" || href === "/#") return;
 
-    e.preventDefault();
-    const targetId = href.replace("#", "");
-    scrollToTargetId(targetId);
+    // Same-page /# links on the homepage: smooth scroll without reload
+    if (href.startsWith("/#") && (window.location.pathname === "/" || window.location.pathname === "/index.html")) {
+      e.preventDefault();
+      scrollToTargetId(href.slice(2));
+    } else if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      scrollToTargetId(targetId);
+    } else {
+      return; // cross-page /# link: let the browser navigate
+    }
 
     // Keep URL clean without appending '#...'
     if (window.history && window.history.replaceState) {

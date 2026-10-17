@@ -283,16 +283,22 @@
       <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#fuel-prices" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-gas-pump"></i></span> <span data-i18n="navFuelPrices">Fuel Prices</span></a></li>
-          <li><a href="#eligibility" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-motorcycle"></i></span> <span data-i18n="navEligibility">Eligibility</span></a></li>
-          <li><a href="#sms-tool" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span data-i18n="navSmsTool">SMS Tool</span></a></li>
-          <li><a href="#visual-examples" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-id-card"></i></span> <span data-i18n="navVisualGuide">Visuals</span></a></li>
-          <li><a href="#video-guide" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-play"></i></span> <span data-i18n="navVideo">Video</span></a></li>
-          <li><a href="#roadmap" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-ticket"></i></span> <span data-i18n="navTokenGuide">Token</span></a></li>
-          <li><a href="#calculator" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-calculator"></i></span> <span data-i18n="navCalculator">Calculator</span></a></li>
-          <li><a href="#faqs" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> <span data-i18n="navFaq">FAQs</span></a></li>
-          <li><a href="#detailed-guides" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> <span data-i18n="navGuides">Guides</span></a></li>
-          <li class="nav-cta-item"><a href="#sms-tool" class="nav-cta-btn"><span data-i18n="navApplyBtn">Apply 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a></li>
+          <li><a href="/" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-house"></i></span> <span data-i18n="navHome">Home</span></a></li>
+          <li class="nav-item-dropdown">
+            <a href="/#detailed-guides" class="nav-link nav-dropdown-toggle" aria-haspopup="true"><span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> <span data-i18n="navGuides">Guides</span> <i class="fa-solid fa-chevron-down dropdown-caret"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="/petrol-prices"><i class="fa-solid fa-gas-pump"></i> <span data-i18n="navFuelPrices">Petrol Prices</span></a></li>
+              <li><a href="/registration"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="navRegistration">Registration</span></a></li>
+              <li><a href="/eligibility"><i class="fa-solid fa-motorcycle"></i> <span data-i18n="navEligibility">Eligibility</span></a></li>
+              <li><a href="/token"><i class="fa-solid fa-ticket"></i> <span data-i18n="navTok">TOK Token</span></a></li>
+              <li><a href="/complaints"><i class="fa-solid fa-headset"></i> <span data-i18n="navComplaints">Complaints</span></a></li>
+              <li><a href="/urdu-guide"><i class="fa-solid fa-language"></i> <span>اردو گائیڈ</span></a></li>
+            </ul>
+          </li>
+          <li><a href="/#sms-tool" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span data-i18n="navSmsTool">SMS Tool</span></a></li>
+          <li><a href="/#calculator" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-calculator"></i></span> <span data-i18n="navCalculator">Calculator</span></a></li>
+          <li><a href="/#faqs" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> <span data-i18n="navFaq">FAQs</span></a></li>
+          <li class="nav-cta-item"><a href="/#sms-tool" class="nav-cta-btn"><span data-i18n="navApplyBtn">Apply 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a></li>
         </ul>
       </nav>
 
@@ -345,7 +351,7 @@
 
             <div class="hero-actions">
               <a href="#sms-tool" class="btn-primary"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i><span data-i18n="heroBtnPrimary">Prepare 9771 SMS</span></a>
-              <a href="#fuel-prices" class="btn-secondary"><i class="fa-solid fa-gas-pump" style="margin-right: 8px;"></i><span data-i18n="heroBtnRates">Petrol Price Today</span></a>
+              <a href="/petrol-prices" class="btn-secondary"><i class="fa-solid fa-gas-pump" style="margin-right: 8px;"></i><span data-i18n="heroBtnRates">Petrol Price Today</span></a>
             </div>
 
             <div class="hero-privacy-guarantee">
@@ -1575,12 +1581,12 @@
           <h4 class="footer-heading" data-i18n="footerNavHeading">Navigation</h4>
           <ul class="footer-links">
             <li><a href="#top" class="footer-link" data-i18n="footerHome">Home</a></li>
-            <li><a href="#fuel-prices" class="footer-link" data-i18n="navFuelPrices">Fuel Prices</a></li>
-            <li><a href="#eligibility" class="footer-link" data-i18n="navEligibility">Eligibility</a></li>
+            <li><a href="/petrol-prices" class="footer-link" data-i18n="navFuelPrices">Fuel Prices</a></li>
+            <li><a href="/eligibility" class="footer-link" data-i18n="navEligibility">Eligibility</a></li>
             <li><a href="#sms-tool" class="footer-link" data-i18n="navSmsTool">Registration Tool</a></li>
             <li><a href="#visual-examples" class="footer-link" data-i18n="navVisualGuide">Visual Examples</a></li>
             <li><a href="#video-guide" class="footer-link" data-i18n="navVideo">Video Guide</a></li>
-            <li><a href="#roadmap" class="footer-link" data-i18n="navTokenGuide">Token Guide</a></li>
+            <li><a href="/token" class="footer-link" data-i18n="navTokenGuide">Token Guide</a></li>
             <li><a href="#faqs" class="footer-link" data-i18n="navFaq">FAQs</a></li>
           </ul>
         </div>

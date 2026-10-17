@@ -76,14 +76,28 @@
       <nav class="nav-container" id="main-nav" aria-label="Main Navigation">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="/" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-house"></i></span> <span>Home</span></a></li>
-          <li><a href="/petrol-prices" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-gas-pump"></i></span> <span>Petrol Prices</span></a></li>
-          <li><a href="/registration" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span>Registration</span></a></li>
-          <li><a href="/eligibility" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-motorcycle"></i></span> <span>Eligibility</span></a></li>
-          <li><a href="/token" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-ticket"></i></span> <span>TOK Token</span></a></li>
-          <li><a href="/complaints" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-headset"></i></span> <span>Complaints</span></a></li>
-          <li><a href="/urdu-guide" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-language"></i></span> <span>اردو گائیڈ</span></a></li>
-          <li class="nav-cta-item"><a href="/#sms-tool" class="nav-cta-btn"><span>Apply 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a></li>
+          <li><a href="/" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-house"></i></span> <span data-i18n="navHome">Home</span></a></li>
+          <li class="nav-item-dropdown">
+            <a href="/#detailed-guides" class="nav-link nav-dropdown-toggle" aria-haspopup="true"><span class="nav-icon"><i class="fa-solid fa-book-open"></i></span> <span data-i18n="navGuides">Guides</span> <i class="fa-solid fa-chevron-down dropdown-caret"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="/petrol-prices"><i class="fa-solid fa-gas-pump"></i> <span data-i18n="navFuelPrices">Petrol Prices</span></a></li>
+              <li><a href="/registration"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="navRegistration">Registration</span></a></li>
+              <li><a href="/eligibility"><i class="fa-solid fa-motorcycle"></i> <span data-i18n="navEligibility">Eligibility</span></a></li>
+              <li><a href="/token"><i class="fa-solid fa-ticket"></i> <span data-i18n="navTok">TOK Token</span></a></li>
+              <li><a href="/complaints"><i class="fa-solid fa-headset"></i> <span data-i18n="navComplaints">Complaints</span></a></li>
+              <li><a href="/urdu-guide"><i class="fa-solid fa-language"></i> <span>اردو گائیڈ</span></a></li>
+            </ul>
+          </li>
+          <li><a href="/#sms-tool" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span data-i18n="navSmsTool">SMS Tool</span></a></li>
+          <li><a href="/#calculator" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-calculator"></i></span> <span data-i18n="navCalculator">Calculator</span></a></li>
+          <li><a href="/#faqs" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> <span data-i18n="navFaq">FAQs</span></a></li>
+          <li class="nav-cta-item"><a href="/#sms-tool" class="nav-cta-btn"><span data-i18n="navApplyBtn">Apply 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a></li>
+        </ul>
+          </li>
+          <li><a href="/#sms-tool" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-paper-plane"></i></span> <span data-i18n="navSmsTool">SMS Tool</span></a></li>
+          <li><a href="/#calculator" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-calculator"></i></span> <span data-i18n="navCalculator">Calculator</span></a></li>
+          <li><a href="/#faqs" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> <span data-i18n="navFaq">FAQs</span></a></li>
+          <li class="nav-cta-item"><a href="/#sms-tool" class="nav-cta-btn"><span data-i18n="navApplyBtn">Apply 9771</span> <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a></li>
         </ul>
       </nav>
 
@@ -92,13 +106,6 @@
         
 
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="bar bar-1"></span>
-          <span class="bar bar-2"></span>
-          <span class="bar bar-3"></span>
-        </button>
-      </div>
-    </div>
-  </header>
   <main id="top">
     <section class="page-hero">
       <div class="container">
@@ -183,6 +190,20 @@
             <li><a href="/#video-guide" class="footer-link" data-i18n="navVideo">Video Guide</a></li>
             <li><a href="/#roadmap" class="footer-link" data-i18n="navTokenGuide">Token Guide</a></li>
             <li><a href="/#faqs" class="footer-link" data-i18n="navFaq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerGuidesHeading">Detailed Guides</h4>
+          <ul class="footer-links">
+            <li><a href="/petrol-prices" class="footer-link">Petrol Price Today</a></li>
+            <li><a href="/registration" class="footer-link">9771 Registration</a></li>
+            <li><a href="/eligibility" class="footer-link">Eligibility Criteria</a></li>
+            <li><a href="/token" class="footer-link">TOK Token Guide</a></li>
+            <li><a href="/complaints" class="footer-link">Complaints & Helpline</a></li>
+            <li><a href="/urdu-guide" class="footer-link">اردو گائیڈ</a></li>
+            <li><a href="/about" class="footer-link">About Us</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
