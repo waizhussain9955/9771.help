@@ -3144,3 +3144,59 @@ html[dir="rtl"] .toast-container {
     flex-shrink: 0;
   }
 }
+
+/* ==========================================================================
+   Oct 2026 — 320px viewport fixes (province table + helpline card)
+   Behavior only, no visual redesign.
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  /* Guide cards must never force the page wider than the viewport */
+  .comprehensive-guide-grid > * {
+    min-width: 0;
+  }
+  .guide-topic-card {
+    min-width: 0;
+    padding: 1.1rem;
+  }
+  .topic-title {
+    overflow-wrap: break-word;
+    font-size: 1.02rem;
+  }
+
+  /* Helpline pills: stack vertically instead of squeezing side-by-side */
+  .helpline-badges-row {
+    flex-direction: column;
+  }
+  .helpline-pill {
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Sample SMS box: scroll internally instead of pushing the card wider */
+  .sample-sms-box {
+    padding: 0.7rem;
+    max-width: 100%;
+  }
+  .sample-sms-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sample-sms-body code {
+    font-size: 0.72rem;
+    overflow-wrap: break-word;
+  }
+
+  /* Province table: clean horizontal swipe with denser cells */
+  .province-table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+  .styled-province-table {
+    min-width: 540px;
+    font-size: 0.78rem;
+  }
+  .styled-province-table th,
+  .styled-province-table td {
+    padding: 0.45rem 0.55rem;
+  }
+}
