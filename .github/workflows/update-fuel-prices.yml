@@ -1,0 +1,45 @@
+# 9771.help — Daily automatic fuel price update
+#
+# Runs every morning (PKT), scrapes the latest OGRA-notified petrol/diesel
+# prices, and commits the update if anything changed. Vercel redeploys
+# automatically on push, so the site always shows current prices.
+#
+# No secrets needed: uses the built-in GITHUB_TOKEN.
+
+name: Daily fuel price update
+
+on:
+  schedule:
+    # 01:30 UTC = 06:30 PKT, daily
+    - cron: "30 1 * * *"
+  workflow_dispatch: # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update fuel prices
+        run: python3 scripts/update_prices.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "9771.help price bot"
+          git config user.email "bot@9771.help"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No price changes - nothing to commit."
+          else
+            git commit -m "auto: daily fuel price update"
+            git push
+          fi
