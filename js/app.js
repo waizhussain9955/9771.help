@@ -20,7 +20,7 @@
 // Update this date whenever official guidelines are updated
 const LAST_UPDATED = {
   en: "October 19, 2026",
-  ur: "18 اکتوبر 2026"
+  ur: "19 اکتوبر 2026"
 };
 
 // Configurable Province Codes (First Letter Logic)
@@ -693,6 +693,8 @@ const TRANSLATIONS = {
     rel_eligibility: "اہلیت کے معیارات",
     rel_token: "TOK ٹوکن گائیڈ",
     rel_complaints: "شکایات اور ہیلپ لائن",
+    rel_about: "ہمارے بارے میں",
+    rel_contact: "رابطہ",
     co_b001: "شکایات",
     co_b002: "PAK ID ایپ · ہیلپ لائن 9771",
     co_b003: "9771 شکایات اور ہیلپ لائن گائیڈ",
@@ -1061,11 +1063,14 @@ function applyLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
 
-  // Translate all data-i18n elements
+  // Translate all data-i18n elements (English restored from cache when key missing)
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
+    if (el.dataset.origText === undefined) el.dataset.origText = el.textContent;
     if (t[key]) {
       el.textContent = t[key];
+    } else if (lang === "en") {
+      el.textContent = el.dataset.origText;
     }
   });
 

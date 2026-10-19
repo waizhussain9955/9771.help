@@ -139,7 +139,7 @@ def main():
     if en_long:
         s = re.sub(r'(en: ")[A-Z][a-z]+ \d{1,2}, \d{4}(",\n  ur: ")',
                    rf"\g<1>{en_long}\g<2>", s, count=1)
-        s = s.replace('ur: "17 اکتوبر 2026"', f'ur: "{ur_date}"')
+        s = re.sub(r'(  ur: ")\d{1,2} \S+ \d{4}(")', rf"\g<1>{ur_date}\g<2>", s, count=1)
         # date-stamped price labels (en + ur)
         s = re.sub(r"Notified Rate \(\d{1,2} [A-Z][a-z]{2} \d{4}\):",
                    f"Notified Rate ({en_short}):", s)
