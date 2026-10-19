@@ -580,6 +580,8 @@ html[dir="rtl"] .hero-clarity-box {
 .btn-primary:hover {
   background: var(--brand-green-hover);
 }
+.page-article a.btn-primary { color: #FFFFFF; }
+.page-article a.btn-secondary { color: var(--text-heading); }
 
 .btn-secondary {
   background: var(--bg-subtle);
