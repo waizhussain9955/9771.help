@@ -96,6 +96,10 @@
 
       <!-- Header Actions (Animated Mobile Toggle) -->
       <div class="header-right-actions">
+        <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Toggle language">
+          <i class="fa-solid fa-globe" style="margin-right: 5px;"></i><span data-i18n="langSwitchBtn">اردو</span>
+        </button>
+
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
@@ -110,11 +114,11 @@
       <div class="container">
         <div class="page-hero-grid">
           <div>
-            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">›</span> <span>Petrol Prices</span></nav>
-            <span class="section-tag">Daily Updated · OGRA Notified Rates</span>
-            <h1 class="page-title">Petrol Price in Pakistan Today</h1>
-            <p class="page-intro">Official OGRA-notified petrol and diesel prices, updated daily — plus exactly what you pay after the 9771 Rs. 100/litre fuel relief. Bookmark this page for the current rate before every fill-up.</p>
-            <p class="page-updated">Last updated: <strong id="last-updated-date">October 19, 2026</strong> · 9771.help editorial team</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/" data-i18n="navHome">Home</a> <span aria-hidden="true">›</span> <span data-i18n="pp_b001">Petrol Prices</span></nav>
+            <span class="section-tag" data-i18n="pp_b002">Daily Updated · OGRA Notified Rates</span>
+            <h1 class="page-title" data-i18n="pp_b003">Petrol Price in Pakistan Today</h1>
+            <p class="page-intro" data-i18n="pp_b004">Official OGRA-notified petrol and diesel prices, updated daily — plus exactly what you pay after the 9771 Rs. 100/litre fuel relief. Bookmark this page for the current rate before every fill-up.</p>
+            <p class="page-updated" data-i18n-html="pp_b005">Last updated: <strong id="last-updated-date">October 19, 2026</strong> · 9771.help editorial team</p>
           </div>
           <div><img class="page-hero-img" src="/assets/hero_fuel_station.webp" alt="Fuel station in Pakistan — today's petrol price" fetchpriority="high"></div>
         </div>
@@ -124,44 +128,44 @@
       <div class="container">
         <article class="page-article">
 
-        <h2>Today's Official Fuel Prices</h2>
-        <p>Pakistan's fuel prices are officially notified by OGRA (Oil & Gas Regulatory Authority). Since July 2026, Pakistan follows a <strong>daily pricing mechanism</strong>, so rates can change every day. The table below always shows the latest notified rates — our system refreshes them automatically every morning.</p>
+        <h2 data-i18n="pp_b006">Today's Official Fuel Prices</h2>
+        <p data-i18n-html="pp_b010">Pakistan's fuel prices are officially notified by OGRA (Oil & Gas Regulatory Authority). Since July 2026, Pakistan follows a <strong>daily pricing mechanism</strong>, so rates can change every day. The table below always shows the latest notified rates — our system refreshes them automatically every morning.</p>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin:1.5rem 0;">
           <div style="border:1px solid #E5E7EB; border-radius:12px; padding:1.25rem; background:#fff;">
-            <div style="font-size:0.8rem; color:#6B7280; margin-bottom:0.25rem;">Petrol (Regular)</div>
-            <div style="font-size:1.6rem; font-weight:800; color:#111827;"><span class="price-val-regular">Rs. 386.30 <small>/ Litre</small></span></div>
-            <div style="font-size:0.78rem; color:#9CA3AF;">OGRA notified rate</div>
+            <div style="font-size:0.8rem; color:#6B7280; margin-bottom:0.25rem;" data-i18n="pp_card1_label">Petrol (Regular)</div>
+            <div style="font-size:1.6rem; font-weight:800; color:#111827;"><span class="price-val-regular">Rs. 386.30 <small data-i18n="perLitre">/ Litre</small></span></div>
+            <div style="font-size:0.78rem; color:#9CA3AF;" data-i18n="pp_card_note">OGRA notified rate</div>
           </div>
           <div style="border:1px solid #BBF7D0; border-radius:12px; padding:1.25rem; background:#F0FDF4;">
-            <div style="font-size:0.8rem; color:#15803D; margin-bottom:0.25rem;">Your 9771 Subsidized Price</div>
-            <div style="font-size:1.6rem; font-weight:800; color:#006837;"><span class="price-val-subsidized">Rs. 286.30 <small>/ Litre</small></span></div>
-            <div style="font-size:0.78rem; color:#15803D;">After Rs. 100/L relief</div>
+            <div style="font-size:0.8rem; color:#15803D; margin-bottom:0.25rem;" data-i18n="pp_card2_label">Your 9771 Subsidized Price</div>
+            <div style="font-size:1.6rem; font-weight:800; color:#006837;"><span class="price-val-subsidized">Rs. 286.30 <small data-i18n="perLitre">/ Litre</small></span></div>
+            <div style="font-size:0.78rem; color:#15803D;" data-i18n="pp_card2_note">After Rs. 100/L relief</div>
           </div>
           <div style="border:1px solid #E5E7EB; border-radius:12px; padding:1.25rem; background:#fff;">
-            <div style="font-size:0.8rem; color:#6B7280; margin-bottom:0.25rem;">High-Speed Diesel</div>
-            <div style="font-size:1.6rem; font-weight:800; color:#111827;"><span class="price-val-standard">Rs. 396.96 <small>/ Litre</small></span></div>
-            <div style="font-size:0.78rem; color:#9CA3AF;">OGRA notified rate</div>
+            <div style="font-size:0.8rem; color:#6B7280; margin-bottom:0.25rem;" data-i18n="pp_card3_label">High-Speed Diesel</div>
+            <div style="font-size:1.6rem; font-weight:800; color:#111827;"><span class="price-val-standard">Rs. 396.96 <small data-i18n="perLitre">/ Litre</small></span></div>
+            <div style="font-size:0.78rem; color:#9CA3AF;" data-i18n="pp_card_note">OGRA notified rate</div>
           </div>
         </div>
-        <h2>How the 9771 Subsidy Changes Your Price</h2>
-        <p>Registered beneficiaries of the <a href="/registration" style="color:#006837;">9771 Fuel Relief Scheme</a> don't pay the market rate. Instead, you receive digital fuel tokens via SMS that carry a flat <strong>Rs. 100 per litre</strong> discount:</p>
+        <h2 data-i18n="pp_b007">How the 9771 Subsidy Changes Your Price</h2>
+        <p data-i18n-html="pp_b011">Registered beneficiaries of the <a href="/registration" style="color:#006837;">9771 Fuel Relief Scheme</a> don't pay the market rate. Instead, you receive digital fuel tokens via SMS that carry a flat <strong>Rs. 100 per litre</strong> discount:</p>
         <ul>
-          <li><strong>Motorcycles, rickshaws &amp; Qingqis:</strong> weekly Rs. 500 tokens (5 litres each), up to 20 litres/month → save up to <strong>Rs. 2,000/month</strong>.</li>
-          <li><strong>Cars up to 800cc:</strong> Rs. 1,000 token every 10 days (10 litres), up to 30 litres/month → save up to <strong>Rs. 3,000/month</strong>.</li>
+          <li data-i18n-html="pp_b016"><strong>Motorcycles, rickshaws &amp; Qingqis:</strong> weekly Rs. 500 tokens (5 litres each), up to 20 litres/month → save up to <strong>Rs. 2,000/month</strong>.</li>
+          <li data-i18n-html="pp_b017"><strong>Cars up to 800cc:</strong> Rs. 1,000 token every 10 days (10 litres), up to 30 litres/month → save up to <strong>Rs. 3,000/month</strong>.</li>
         </ul>
-        <p>At the pump you present the token code (received by sending <a href="/token" style="color:#006837;">TOK to 9771</a>); the discount applies to the token's litres and the rest is billed at the regular rate above.</p>
-        <h2>Why Prices Change Daily</h2>
-        <p>Pakistan moved from a fortnightly to a <strong>daily fuel pricing mechanism in July 2026</strong>. OGRA now notifies revised ex-depot prices every day based on international oil prices, the rupee exchange rate, and the petroleum levy. That's why checking the current rate — right here — before refuelling matters more than ever.</p>
-        <h2>Petrol Price History (October 2026)</h2>
-        <p>On <strong>17 October 2026</strong>, OGRA notified petrol at Rs. 386.30 and high-speed diesel at Rs. 396.96 per litre. With the 9771 subsidy, eligible citizens paid an effective Rs. 286.30 per litre on their quota fuel.</p>
-        <p><em>Tip:</em> fuel prices are uniform nationwide at the notified rate — if a pump charges more, <a href="/complaints" style="color:#006837;">file a complaint</a>.</p>
+        <p data-i18n-html="pp_b012">At the pump you present the token code (received by sending <a href="/token" style="color:#006837;">TOK to 9771</a>); the discount applies to the token's litres and the rest is billed at the regular rate above.</p>
+        <h2 data-i18n="pp_b008">Why Prices Change Daily</h2>
+        <p data-i18n-html="pp_b013">Pakistan moved from a fortnightly to a <strong>daily fuel pricing mechanism in July 2026</strong>. OGRA now notifies revised ex-depot prices every day based on international oil prices, the rupee exchange rate, and the petroleum levy. That's why checking the current rate — right here — before refuelling matters more than ever.</p>
+        <h2 data-i18n="pp_b009">Petrol Price History (October 2026)</h2>
+        <p data-i18n-html="pp_b014">On <strong>17 October 2026</strong>, OGRA notified petrol at Rs. 386.30 and high-speed diesel at Rs. 396.96 per litre. With the 9771 subsidy, eligible citizens paid an effective Rs. 286.30 per litre on their quota fuel.</p>
+        <p data-i18n-html="pp_b015"><em>Tip:</em> fuel prices are uniform nationwide at the notified rate — if a pump charges more, <a href="/complaints" style="color:#006837;">file a complaint</a>.</p>
         <div class="page-cta">
-          <h3>Ready to register?</h3>
-          <p>Use our free SMS builder on the homepage to prepare your REG message without errors.</p>
-          <a href="/#sms-tool" class="btn-primary" style="display:inline-flex;">Open the 9771 SMS Tool <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
+          <h3 data-i18n="ctaTitle">Ready to register?</h3>
+          <p data-i18n="ctaDesc">Use our free SMS builder on the homepage to prepare your REG message without errors.</p>
+          <a href="/#sms-tool" class="btn-primary" style="display:inline-flex;" data-i18n-html="ctaBtn">Open the 9771 SMS Tool <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
         </div>
-        <h2>Related Guides</h2>
-        <ul class="related-list"><li><a href="/registration">9771 Registration Guide</a></li><li><a href="/eligibility">Eligibility Criteria</a></li><li><a href="/token">TOK Token Guide</a></li><li><a href="/complaints">Complaints & Helpline</a></li></ul>
+        <h2 data-i18n="pp_b018">Related Guides</h2>
+        <ul class="related-list"><li><a href="/registration" data-i18n="rel_registration">9771 Registration Guide</a></li><li><a href="/eligibility" data-i18n="rel_eligibility">Eligibility Criteria</a></li><li><a href="/token" data-i18n="rel_token">TOK Token Guide</a></li><li><a href="/complaints" data-i18n="rel_complaints">Complaints & Helpline</a></li></ul>
         </article>
       </div>
     </section>

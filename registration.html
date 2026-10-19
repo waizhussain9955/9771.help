@@ -96,6 +96,10 @@
 
       <!-- Header Actions (Animated Mobile Toggle) -->
       <div class="header-right-actions">
+        <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Toggle language">
+          <i class="fa-solid fa-globe" style="margin-right: 5px;"></i><span data-i18n="langSwitchBtn">اردو</span>
+        </button>
+
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
@@ -110,11 +114,11 @@
       <div class="container">
         <div class="page-hero-grid">
           <div>
-            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">›</span> <span>Registration</span></nav>
-            <span class="section-tag">Free SMS · No App Needed</span>
-            <h1 class="page-title">9771 Registration: Complete SMS Guide</h1>
-            <p class="page-intro">Registration for the PM Fuel Relief Scheme is done entirely by SMS — no app, no website form, no fee. Send one correctly formatted message to 9771 and you're in. This guide covers the exact format, province codes, and the mistakes that get messages rejected.</p>
-            <p class="page-updated">Last updated: <strong id="last-updated-date">October 17, 2026</strong> · 9771.help editorial team</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/" data-i18n="navHome">Home</a> <span aria-hidden="true">›</span> <span data-i18n="rg_b001">Registration</span></nav>
+            <span class="section-tag" data-i18n="rg_b002">Free SMS · No App Needed</span>
+            <h1 class="page-title" data-i18n="rg_b003">9771 Registration: Complete SMS Guide</h1>
+            <p class="page-intro" data-i18n="rg_b004">Registration for the PM Fuel Relief Scheme is done entirely by SMS — no app, no website form, no fee. Send one correctly formatted message to 9771 and you're in. This guide covers the exact format, province codes, and the mistakes that get messages rejected.</p>
+            <p class="page-updated" data-i18n-html="rg_b005">Last updated: <strong id="last-updated-date">October 17, 2026</strong> · 9771.help editorial team</p>
           </div>
           <div><img class="page-hero-img" src="/assets/phone_sms_guide.webp" alt="Sending 9771 registration SMS from a phone" fetchpriority="high"></div>
         </div>
@@ -124,54 +128,54 @@
       <div class="container">
         <article class="page-article">
 
-        <h2>The REG SMS Format</h2>
-        <p>Type the following in your phone's SMS app and send it to <strong>9771</strong>:</p>
+        <h2 data-i18n="rg_b006">The REG SMS Format</h2>
+        <p data-i18n-html="rg_b012">Type the following in your phone's SMS app and send it to <strong>9771</strong>:</p>
         <div style="background:#F3F4F6; border:1px solid #E5E7EB; border-radius:10px; padding:1.25rem; font-family:monospace; font-size:1.1rem; font-weight:700; color:#006837; margin:1rem 0; word-break:break-all;">
           REG [13-digit CNIC] [Vehicle Number] [Province Code] [Registration Date DDMMYYYY]
         </div>
-        <p><strong>Example:</strong> <code>REG 4210112345671 KHI1234 S 15082020</code></p>
-        <h2>What Each Field Means</h2>
+        <p data-i18n-html="rg_b013"><strong>Example:</strong> <code>REG 4210112345671 KHI1234 S 15082020</code></p>
+        <h2 data-i18n="rg_b007">What Each Field Means</h2>
         <ul>
-          <li><strong>CNIC</strong> — your 13-digit Computerized National Identity Card number, without dashes.</li>
-          <li><strong>Vehicle Number</strong> — your number plate as on the registration book (e.g. KHI1234, ICT567).</li>
-          <li><strong>Province Code</strong> — single letter for the province where the vehicle is registered (table below).</li>
-          <li><strong>Registration Date</strong> — the vehicle's registration date in DDMMYYYY format, from your registration book — <em>not</em> your date of birth.</li>
+          <li data-i18n-html="rg_b015"><strong>CNIC</strong> — your 13-digit Computerized National Identity Card number, without dashes.</li>
+          <li data-i18n-html="rg_b016"><strong>Vehicle Number</strong> — your number plate as on the registration book (e.g. KHI1234, ICT567).</li>
+          <li data-i18n-html="rg_b017"><strong>Province Code</strong> — single letter for the province where the vehicle is registered (table below).</li>
+          <li data-i18n-html="rg_b018"><strong>Registration Date</strong> — the vehicle's registration date in DDMMYYYY format, from your registration book — <em>not</em> your date of birth.</li>
         </ul>
-        <h2>Province Codes</h2>
+        <h2 data-i18n="rg_b008">Province Codes</h2>
         <ul>
-          <li><strong>P</strong> — Punjab</li>
-          <li><strong>S</strong> — Sindh</li>
-          <li><strong>K</strong> — Khyber Pakhtunkhwa</li>
-          <li><strong>B</strong> — Balochistan</li>
-          <li><strong>I</strong> — Islamabad</li>
-          <li><strong>A</strong> — Azad Jammu &amp; Kashmir</li>
-          <li><strong>G</strong> — Gilgit-Baltistan</li>
+          <li data-i18n-html="rg_b019"><strong>P</strong> — Punjab</li>
+          <li data-i18n-html="rg_b020"><strong>S</strong> — Sindh</li>
+          <li data-i18n-html="rg_b021"><strong>K</strong> — Khyber Pakhtunkhwa</li>
+          <li data-i18n-html="rg_b022"><strong>B</strong> — Balochistan</li>
+          <li data-i18n-html="rg_b023"><strong>I</strong> — Islamabad</li>
+          <li data-i18n-html="rg_b024"><strong>A</strong> — Azad Jammu &amp; Kashmir</li>
+          <li data-i18n-html="rg_b025"><strong>G</strong> — Gilgit-Baltistan</li>
         </ul>
-        <h2>Step-by-Step</h2>
+        <h2 data-i18n="rg_b009">Step-by-Step</h2>
         <ol>
-          <li>Open your phone's SMS app (use the SIM registered against your CNIC).</li>
-          <li>Type the REG message exactly in the format above.</li>
-          <li>Send it to <strong>9771</strong> — the SMS is <strong>completely free</strong>.</li>
-          <li>Wait for the confirmation SMS. NADRA and excise databases verify your details automatically.</li>
-          <li>Once approved, send <strong>TOK</strong> to 9771 before each pump visit to get your fuel token.</li>
+          <li data-i18n="rg_b026">Open your phone's SMS app (use the SIM registered against your CNIC).</li>
+          <li data-i18n="rg_b027">Type the REG message exactly in the format above.</li>
+          <li data-i18n-html="rg_b028">Send it to <strong>9771</strong> — the SMS is <strong>completely free</strong>.</li>
+          <li data-i18n="rg_b029">Wait for the confirmation SMS. NADRA and excise databases verify your details automatically.</li>
+          <li data-i18n-html="rg_b030">Once approved, send <strong>TOK</strong> to 9771 before each pump visit to get your fuel token.</li>
         </ol>
-        <h2>Common Mistakes That Get Rejected</h2>
+        <h2 data-i18n="rg_b010">Common Mistakes That Get Rejected</h2>
         <ul>
-          <li>Using your <strong>date of birth</strong> instead of the vehicle's registration date.</li>
-          <li>Wrong <strong>province code</strong> — use the province where the vehicle is registered, not where you live now.</li>
-          <li>Spaces or dashes inside the CNIC.</li>
-          <li>Sending from a SIM not registered in your name.</li>
-          <li>Registering more than <strong>one vehicle per owner</strong> — only one is allowed (see <a href="/eligibility" style="color:#006837;">eligibility</a>).</li>
+          <li data-i18n-html="rg_b031">Using your <strong>date of birth</strong> instead of the vehicle's registration date.</li>
+          <li data-i18n-html="rg_b032">Wrong <strong>province code</strong> — use the province where the vehicle is registered, not where you live now.</li>
+          <li data-i18n="rg_b033">Spaces or dashes inside the CNIC.</li>
+          <li data-i18n="rg_b034">Sending from a SIM not registered in your name.</li>
+          <li data-i18n-html="rg_b035">Registering more than <strong>one vehicle per owner</strong> — only one is allowed (see <a href="/eligibility" style="color:#006837;">eligibility</a>).</li>
         </ul>
-        <h2>Is Registration Really Free?</h2>
-        <p>Yes. The government made the registration SMS <strong>free of cost</strong>, and officials have warned that no one will ever ask you for an OTP, fee, or CNIC photo by phone, WhatsApp, or SMS. Anyone asking for money in the name of 9771 registration is a scammer — <a href="/complaints" style="color:#006837;">report them</a>.</p>
+        <h2 data-i18n="rg_b011">Is Registration Really Free?</h2>
+        <p data-i18n-html="rg_b014">Yes. The government made the registration SMS <strong>free of cost</strong>, and officials have warned that no one will ever ask you for an OTP, fee, or CNIC photo by phone, WhatsApp, or SMS. Anyone asking for money in the name of 9771 registration is a scammer — <a href="/complaints" style="color:#006837;">report them</a>.</p>
         <div class="page-cta">
-          <h3>Ready to register?</h3>
-          <p>Use our free SMS builder on the homepage to prepare your REG message without errors.</p>
-          <a href="/#sms-tool" class="btn-primary" style="display:inline-flex;">Open the 9771 SMS Tool <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
+          <h3 data-i18n="ctaTitle">Ready to register?</h3>
+          <p data-i18n="ctaDesc">Use our free SMS builder on the homepage to prepare your REG message without errors.</p>
+          <a href="/#sms-tool" class="btn-primary" style="display:inline-flex;" data-i18n-html="ctaBtn">Open the 9771 SMS Tool <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
         </div>
-        <h2>Related Guides</h2>
-        <ul class="related-list"><li><a href="/petrol-prices">Petrol Price Today</a></li><li><a href="/eligibility">Eligibility Criteria</a></li><li><a href="/token">TOK Token Guide</a></li><li><a href="/complaints">Complaints & Helpline</a></li></ul>
+        <h2 data-i18n="rg_b036">Related Guides</h2>
+        <ul class="related-list"><li><a href="/petrol-prices" data-i18n="rel_prices">Petrol Price Today</a></li><li><a href="/eligibility" data-i18n="rel_eligibility">Eligibility Criteria</a></li><li><a href="/token" data-i18n="rel_token">TOK Token Guide</a></li><li><a href="/complaints" data-i18n="rel_complaints">Complaints & Helpline</a></li></ul>
         </article>
       </div>
     </section>
