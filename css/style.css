@@ -2154,18 +2154,24 @@ html[dir="rtl"] .guide-bullet-list li::before {
   z-index: 65;
   background: #111827;
   color: #D1D5DB;
-  padding: 3.5rem 0 2rem;
-  margin-top: 4rem;
+  padding: 2.25rem 0 1.5rem;
+  margin-top: 3rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2.25rem;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   .footer-grid {
     grid-template-columns: 1fr;
   }
